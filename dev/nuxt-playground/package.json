@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "^3.9.3",
+    "vue": "^3.4.14",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@daisy-vuei/core": "workspace:^",
+    "@nuxtjs/tailwindcss": "^6.11.2",
+    "daisyui": "^4.6.1"
+  }
+}

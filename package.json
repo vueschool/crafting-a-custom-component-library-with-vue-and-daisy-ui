@@ -4,9 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "vue-playground:format": "prettier --write dev/vue-playground/src/",
+    "story:dev": "pnpm --filter @daisy-vuei/core story:dev",
+    "story:build": "pnpm --filter @daisy-vuei/core histoire build",
+    "story:preview": "pnpm --filter @daisy-vuei/core histoire preview"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.3.3",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "npm-run-all2": "^6.1.1",
+    "prettier": "^3.0.3"
+  }
 }

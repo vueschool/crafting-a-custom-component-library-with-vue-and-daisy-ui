@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DaisyButton from './components/DaisyButton/DaisyButton.vue'
+</script>
 
 <template>
-  <div class="btn btn-primary">hello world</div>
+  <DaisyButton>Click Me</DaisyButton>
 </template>

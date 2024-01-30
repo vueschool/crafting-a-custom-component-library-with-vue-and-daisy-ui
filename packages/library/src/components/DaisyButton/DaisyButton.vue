@@ -4,13 +4,7 @@ defineProps<{
 }>()
 </script>
 <template>
-  <button class="my-button">
+  <button class="btn-primary btn">
     <slot>{{ label }}</slot>
   </button>
 </template>
-
-<style scoped>
-.my-button {
-  background-color: #f00;
-}
-</style>

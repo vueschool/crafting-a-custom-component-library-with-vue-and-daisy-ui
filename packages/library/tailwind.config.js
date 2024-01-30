@@ -1,4 +1,4 @@
-import { tailwindPlugin } from './src/tailwind-plugin'
+import daisyui from 'daisyui'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,8 +6,5 @@ export default {
   theme: {
     extend: {}
   },
-  plugins: [tailwindPlugin],
-  daisyui: {
-    themes: ['light']
-  }
+  plugins: [daisyui]
 }
