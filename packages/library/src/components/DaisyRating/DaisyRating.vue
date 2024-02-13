@@ -28,7 +28,7 @@ const outOf = defineModel<number>('outOf', { default: 5 })
       :key="n"
       v-mask="shape"
       type="radio"
-      :class="bgClass"
+      :class="[bgClass]"
       :checked="n === rating"
       @input="rating = n"
     />
