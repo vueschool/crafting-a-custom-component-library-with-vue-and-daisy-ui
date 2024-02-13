@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "vue-playground:format": "prettier --write dev/vue-playground/src/",
+    "play:format": "prettier --write dev/vue-playground/src/",
+    "play:dev": "pnpm --filter vue-playground dev",
     "story:dev": "pnpm --filter @daisy-vuei/core story:dev",
     "story:build": "pnpm --filter @daisy-vuei/core histoire build",
     "story:preview": "pnpm --filter @daisy-vuei/core histoire preview"

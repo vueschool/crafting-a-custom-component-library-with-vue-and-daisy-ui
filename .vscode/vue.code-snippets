@@ -1,0 +1,18 @@
+{
+  "HstButton": {
+    "prefix": "HstButton",
+    "body": ["<HstButton>", "   Click me! ", "</HstButton>"]
+  },
+  "HstSelect": {
+    "prefix": "HstSelect",
+    "body": [
+      "<HstSelect",
+      "  v-model=\"state.select\"",
+      "  :title=\"'My really long label'\"",
+      "  :options=\"{",
+      "     $0",
+      "  }\"",
+      "/>"
+    ]
+  }
+}
