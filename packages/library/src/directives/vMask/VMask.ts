@@ -3,23 +3,23 @@ import type { ObjectDirective, VNode, DirectiveBinding } from 'vue'
 // commenting full class name for tailwind JIT to include
 export type DirectiveValueType =
   | 'squircle' //mask-squircle
-  | 'heart' //mask-squircle
-  | 'hexagon' //mask-squircle
-  | 'hexagon-2' //mask-squircle
-  | 'decagon' //mask-squircle
-  | 'pentagon' //mask-squircle
-  | 'diamond' //mask-squircle
-  | 'circle' //mask-squircle
-  | 'square' //mask-squircle
-  | 'parallelogram' //mask-squircle
-  | 'parallelogram-2' //mask-squircle
-  | 'parallelogram-3' //mask-squircle
-  | 'parallelogram-4' //mask-squircle
-  | 'star' //mask-squircle
-  | 'triangle' //mask-squircle
-  | 'triangle-2' //mask-squircle
-  | 'triangle-3' //mask-squircle
-  | 'triangle-4' //mask-squircle
+  | 'heart' //mask-heart
+  | 'hexagon' //mask-hexagon
+  | 'hexagon-2' //mask-hexagon-2
+  | 'decagon' //mask-decagon
+  | 'pentagon' //mask-pentagon
+  | 'diamond' //mask-diamond
+  | 'circle' //mask-circle
+  | 'square' //mask-square
+  | 'parallelogram' //mask-parallelogram
+  | 'parallelogram-2' //mask-parallelogram-2
+  | 'parallelogram-3' //mask-parallelogram-3
+  | 'parallelogram-4' //mask-parallelogram-4
+  | 'star' //mask-star
+  | 'triangle' //mask-triangle
+  | 'triangle-2' //mask-triangle-2
+  | 'triangle-3' //mask-triangle-3
+  | 'triangle-4' //mask-triangle-4
 
 declare module 'vue' {
   export interface ComponentCustomProperties {
@@ -50,10 +50,10 @@ function addMaskClasses(vnode: VNode, binding: DirectiveBinding) {
 }
 
 export const vMask = {
-  created(el: HTMLElement, binding: DirectiveBinding, vnode: VNode, prevVnode) {
+  created(el: HTMLElement, binding: DirectiveBinding, vnode: VNode) {
     addMaskClasses(vnode, binding)
   },
-  beforeUpdate(el: HTMLElement, binding: DirectiveBinding, vnode: VNode, prevVnode) {
+  beforeUpdate(el: HTMLElement, binding: DirectiveBinding, vnode: VNode) {
     addMaskClasses(vnode, binding)
   }
 }
