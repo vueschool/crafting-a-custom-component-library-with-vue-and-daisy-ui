@@ -14,5 +14,27 @@
       "  }\"",
       "/>"
     ]
+  },
+  "Story": {
+    "prefix": "story",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "import { reactive } from 'vue'",
+      "import $0 from './$0.vue'",
+      "",
+      "const state = reactive({})",
+      "</script>",
+      "<template>",
+      "  <Story :layout=\"{ type: 'grid', width: '100%' }\">",
+      "\t<Variant title=\"Horizontal\">",
+      "\t  <$0></$0>",
+      "\t</Variant>",
+      "",
+      "\t<template #controls></template>",
+      "  </Story>",
+      "</template>",
+      ""
+    ],
+    "description": "Boilerplate code for a Histoire story"
   }
 }
