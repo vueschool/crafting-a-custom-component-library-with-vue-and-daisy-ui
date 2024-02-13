@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { MaskOptions } from '@/directives/vMask/VMask'
+import type { DirectiveValueType as Shapes } from '@/directives/vMask/VMask'
 import { vMask } from '@/directives/vMask/VMask'
 withDefaults(
   defineProps<{
     bgClass?: string
-    shape?: MaskOptions
+    shape?: Shapes
   }>(),
   {
     shape: 'star',

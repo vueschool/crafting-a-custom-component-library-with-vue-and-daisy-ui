@@ -10,7 +10,9 @@
     "play:dev": "pnpm --filter vue-playground dev",
     "story:dev": "pnpm --filter @daisy-vuei/core story:dev",
     "story:build": "pnpm --filter @daisy-vuei/core histoire build",
-    "story:preview": "pnpm --filter @daisy-vuei/core histoire preview"
+    "story:preview": "pnpm --filter @daisy-vuei/core histoire preview",
+    "new:component": "hygen component new",
+    "new:directive": "hygen directive new"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,7 @@
     "@vue/eslint-config-typescript": "^12.0.0",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
+    "hygen": "^6.2.11",
     "npm-run-all2": "^6.1.1",
     "prettier": "^3.0.3"
   }

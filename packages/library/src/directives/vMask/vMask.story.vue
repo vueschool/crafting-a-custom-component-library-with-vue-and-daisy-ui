@@ -3,7 +3,7 @@
 import { vMask } from './VMask'
 
 const masks = [
-  'squircle', //
+  'squircle',
   'heart',
   'hexagon',
   'hexagon-2',

@@ -1,7 +1,7 @@
 import type { ObjectDirective, VNode, DirectiveBinding } from 'vue'
 
 // commenting full class name for tailwind JIT to include
-export type MaskOptions =
+export type DirectiveValueType =
   | 'squircle' //mask-squircle
   | 'heart' //mask-squircle
   | 'hexagon' //mask-squircle
@@ -23,7 +23,7 @@ export type MaskOptions =
 
 declare module 'vue' {
   export interface ComponentCustomProperties {
-    vMask: ObjectDirective<HTMLElement, MaskOptions>
+    vMask: ObjectDirective<HTMLElement, DirectiveValueType>
   }
 }
 
