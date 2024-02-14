@@ -11,9 +11,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "play:format": "prettier --write dev/vue-playground/src/",
     "play:dev": "pnpm --filter vue-playground dev",
-    "story:dev": "pnpm --filter @daisy-vuei/core story:dev",
-    "story:build": "pnpm --filter @daisy-vuei/core histoire build",
-    "story:preview": "pnpm --filter @daisy-vuei/core histoire preview",
+    "story:dev": "pnpm --filter @daisy-vue/core story:dev",
+    "story:build": "pnpm --filter @daisy-vue/core histoire build",
+    "story:preview": "pnpm --filter @daisy-vue/core histoire preview",
     "new:component": "hygen component new",
     "new:directive": "hygen directive new"
   },
