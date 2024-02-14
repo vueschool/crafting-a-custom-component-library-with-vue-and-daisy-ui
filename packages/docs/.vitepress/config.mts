@@ -24,9 +24,13 @@ export default defineConfig({
       },
       {
         text: 'Components',
+
+        // leave trailing comma for hygen
+        // prettier-ignore
         items: [
           { text: 'Alert', link: '/components/alert' },
-          { text: 'Rating', link: '/components/rating' }
+          { text: 'Rating', link: '/components/rating' },
+          // do not remove - used by hygen
         ]
       }
     ],

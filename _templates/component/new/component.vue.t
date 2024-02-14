@@ -7,5 +7,7 @@ to: packages/library/src/components/<%=name%>/<%=name%>.vue
 </script>
 
 <template>
-  <div></div>
+  <div>
+    Hello <%=name%>
+  </div>
 </template>
