@@ -1,13 +1,11 @@
-import DaisyPopover from './components/DaisyPopover/DaisyPopover.vue'
-import DaisyButton from './components/DaisyButton/DaisyButton.vue'
-import DaisyAlert from './components/DaisyAlert/DaisyAlert.vue'
-// import - do not remove this line, used for hygen generations
+import components from './components/components'
+import type { App } from 'vue'
 
-// ignore removal of traling comma by pretter so hygen can add new imports
-// prettier-ignore
-export {
-  DaisyPopover,
-  DaisyButton,
-  DaisyAlert,
-  // export - do not remove this line, used for hygen generations
+export default {
+  install(app: App) {
+    for (const key in components) {
+      // @ts-ignore this is fine
+      app.component(key, components[key])
+    }
+  }
 }
