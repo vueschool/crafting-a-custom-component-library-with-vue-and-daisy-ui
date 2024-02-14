@@ -14,13 +14,21 @@
       "import": "./dist/lib.js",
       "require": "./dist/lib.umd.cjs"
     },
+    "./components": {
+      "import": "./src/components/components.ts",
+      "require": "./src/components/components.ts"
+    },
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
     },
-    "./alert": {
+    "./DaisyAlert": {
       "import": "./src/components/DaisyAlert/DaisyAlert.vue",
       "require": "./src/components/DaisyAlert/DaisyAlert.vue"
+    },
+    "./DaisyButton": {
+      "import": "./src/components/DaisyButton/DaisyButton.vue",
+      "require": "./src/components/DaisyButton/DaisyButton.vue"
     },
     "./do-not-touch-replaced-by-hygen": null
   },

@@ -1,8 +1,6 @@
-<script setup lang="ts">
-import { DaisyButton } from 'daisy-vue'
-</script>
+<script setup lang="ts"></script>
 <template>
   <div>
-    <DaisyButton label="hello" />
+    <DaisyAlert type="success" dismissible> Hello world </DaisyAlert>
   </div>
 </template>

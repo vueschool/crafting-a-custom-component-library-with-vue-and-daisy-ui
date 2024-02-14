@@ -15,8 +15,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "daisy-vue": "workspace:^",
     "@nuxtjs/tailwindcss": "^6.11.2",
-    "daisyui": "^4.6.1"
+    "daisyui": "^4.6.1",
+    "nuxt-daisy-vue": "workspace:^"
   }
 }

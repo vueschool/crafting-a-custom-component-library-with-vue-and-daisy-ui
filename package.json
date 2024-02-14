@@ -11,6 +11,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "play:format": "prettier --write dev/vue-playground/src/",
     "play:dev": "pnpm --filter vue-playground dev",
+    "nuxt:dev": "pnpm --filter nuxt-playground dev",
     "story:dev": "pnpm --filter daisy-vue story:dev",
     "story:build": "pnpm --filter daisy-vue story:build",
     "story:preview": "pnpm --filter daisy-vue story:preview",

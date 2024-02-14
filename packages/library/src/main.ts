@@ -1,9 +1,10 @@
-import components from './components/components'
+import comps from './components/components'
 import type { App } from 'vue'
 
-export default {
+export const components = comps
+export const DaisyVuePlugin = {
   install(app: App) {
-    for (const key in components) {
+    for (const key in comps) {
       // @ts-ignore this is fine
       app.component(key, components[key])
     }
