@@ -1,4 +1,3 @@
-
 ---
 to: packages/docs/components/<%=name.toLowerCase()%>.md
 ---
