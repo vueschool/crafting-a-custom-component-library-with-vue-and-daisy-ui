@@ -1,10 +1,8 @@
 import {
-  debounce
-} from "./chunk-TV5Z3XXK.js";
-import {
   commonjsGlobal,
+  debounce,
   getDefaultExportFromCjs
-} from "./chunk-KWQPLJ7U.js";
+} from "./chunk-6VU6BZIL.js";
 import {
   computed,
   createBlock,
@@ -15,8 +13,7 @@ import {
   openBlock,
   ref,
   watchEffect
-} from "./chunk-CZRJEBC5.js";
-import "./chunk-JJCHJJ73.js";
+} from "./chunk-P5OTZ5A5.js";
 
 // ../../node_modules/.pnpm/@vue+repl@3.4.0/node_modules/@vue/repl/dist/codemirror-editor.js
 import "/Users/danielkelly/daisy-ui-component-course/node_modules/.pnpm/@vue+repl@3.4.0/node_modules/@vue/repl/dist/codemirror-editor.css";

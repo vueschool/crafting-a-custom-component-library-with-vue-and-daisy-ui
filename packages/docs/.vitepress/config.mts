@@ -9,7 +9,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Components', link: '/components' }
+      { text: 'Components', link: '/components' },
+      { text: 'Stories', link: 'http://localhost:6006' }
     ],
 
     sidebar: [
