@@ -5,15 +5,15 @@
 ::: code-group
 
 ```npm bash
-npm install @daisy-vue/core
+npm install daisy-vue
 ```
 
 ```pnpm bash
-pnpm add @daisy-vue/core
+pnpm add daisy-vue
 ```
 
 ```yarn bash
-yarn add @daisy-vue/core
+yarn add daisy-vue
 ```
 
 :::
@@ -68,7 +68,7 @@ export default {
   content: [
     './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}',
-    './node_modules/@daisy-vue/core/**/*.{vue,ts}'
+    './node_modules/daisy-vue/**/*.{vue,ts}'
   ]
 }
 ```
@@ -80,7 +80,7 @@ export default {
 :::code-group
 
 ```ts [main.ts]
-import '@daisy-vue/core/style.css'
+import 'daisy-vue/style.css'
 ```
 
 :::
@@ -91,7 +91,7 @@ import '@daisy-vue/core/style.css'
 
 ```vue [App.vue]
 <script setup lang="ts">
-import { DaisyAlert } from '@daisy-vue/core'
+import { DaisyAlert } from 'daisy-vue'
 </script>
 
 <template>

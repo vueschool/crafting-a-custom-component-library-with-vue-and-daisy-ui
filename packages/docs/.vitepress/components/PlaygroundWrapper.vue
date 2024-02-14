@@ -40,7 +40,7 @@ const config = ref({
     }
   },
   imports: {
-    '@daisy-vue/core':
+    'daisy-vue':
       'http://localhost:5173/@fs/Users/danielkelly/daisy-ui-component-course/packages/library/dist/lib.js',
     vue: 'http://localhost:5173/.vitepress/cache/deps/vue.js?v=d0355ec2',
     styles: 'http://localhost:5173/.vitepress/theme/style.css'

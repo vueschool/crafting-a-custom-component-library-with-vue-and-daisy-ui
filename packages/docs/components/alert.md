@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DaisyAlert } from '@daisy-vue/core'
+import { DaisyAlert } from 'daisy-vue'
 </script>
 
 ## Success Alert
@@ -8,7 +8,7 @@ import { DaisyAlert } from '@daisy-vue/core'
 
 ```vue
 <script setup>
-import { DaisyAlert } from '@daisy-vue/core'
+import { DaisyAlert } from 'daisy-vue'
 </script>
 <template>
   <DaisyAlert type="success"> Something awesome is happening </DaisyAlert>
@@ -23,7 +23,7 @@ import { DaisyAlert } from '@daisy-vue/core'
 
 ```vue
 <script setup>
-import { DaisyAlert } from '@daisy-vue/core'
+import { DaisyAlert } from 'daisy-vue'
 </script>
 <template>
   <DaisyAlert type="error"> Something awesome is happening </DaisyAlert>
@@ -38,7 +38,7 @@ import { DaisyAlert } from '@daisy-vue/core'
 
 ```vue
 <script setup>
-import { DaisyAlert } from '@daisy-vue/core'
+import { DaisyAlert } from 'daisy-vue'
 </script>
 <template>
   <DaisyAlert type="warning"> Something awesome is happening </DaisyAlert>
@@ -53,7 +53,7 @@ import { DaisyAlert } from '@daisy-vue/core'
 
 ```vue
 <script setup>
-import { DaisyAlert } from '@daisy-vue/core'
+import { DaisyAlert } from 'daisy-vue'
 </script>
 <template>
   <DaisyAlert type="info"> Something awesome is happening </DaisyAlert>

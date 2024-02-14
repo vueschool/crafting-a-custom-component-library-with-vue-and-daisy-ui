@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DaisyAlert } from '@daisy-vue/core'
+import DaisyAlert from 'daisy-vue/alert'
 </script>
 
 <template>

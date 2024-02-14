@@ -6,7 +6,7 @@ export default {
   content: [
     './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}',
-    './node_modules/@daisy-vue/core/**/*.{vue,ts}'
+    './node_modules/daisy-vue/**/*.{vue,ts}'
   ],
   theme: {
     extend: {}

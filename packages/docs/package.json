@@ -4,13 +4,13 @@
     "docs:dev": "vitepress dev .",
     "docs:build": "vitepress build .",
     "docs:preview": "vitepress preview .",
-    "@daisy-vue/core": "workspace:^"
+    "daisy-vue": "workspace:^"
   },
   "devDependencies": {
     "vitepress": "1.0.0-rc.42"
   },
   "dependencies": {
-    "@daisy-vue/core": "workspace:^",
+    "daisy-vue": "workspace:^",
     "daisyui": "^4.6.1",
     "tailwindcss": "^3.4.1",
     "vitepress-plugin-vue-repl": "^0.0.9",

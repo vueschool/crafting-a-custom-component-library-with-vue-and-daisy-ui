@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "@daisy-vue/core": "workspace:^",
+    "daisy-vue": "workspace:^",
     "daisyui": "^4.7.2",
     "vue": "^3.4.15"
   },

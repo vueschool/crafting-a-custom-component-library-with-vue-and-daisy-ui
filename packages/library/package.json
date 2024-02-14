@@ -1,10 +1,11 @@
 {
-  "name": "@daisy-vue/core",
+  "name": "daisy-vue",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "main": "./dist/lib.umd.cjs",
   "module": "./dist/lib.js",
@@ -16,7 +17,12 @@
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
-    }
+    },
+    "./alert": {
+      "import": "./src/components/DaisyAlert/DaisyAlert.vue",
+      "require": "./src/components/DaisyAlert/DaisyAlert.vue"
+    },
+    "./do-not-touch-replaced-by-hygen": null
   },
   "scripts": {
     "dev": "vite",
