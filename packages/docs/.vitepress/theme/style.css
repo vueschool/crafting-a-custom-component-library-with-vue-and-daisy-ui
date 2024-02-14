@@ -18,6 +18,9 @@
 .VPLink {
   text-decoration: none;
 }
+.VPNavBarMenu {
+  flex-direction: row;
+}
 
 /**
  * Colors
