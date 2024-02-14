@@ -25,7 +25,7 @@ const config = ref({
     showCompileOutput: false,
     clearConsole: false,
 
-    layout: 'vertical',
+    layout: 'horizontal',
     previewOptions: {
       customCode: {
         importCode: `
@@ -57,8 +57,6 @@ const editorConfig = computed(() => {
 onMounted(() => {
   const children = slots.default()
   const code = children?.[0]?.children.replace(/%0A[ ?]$/, '')
-  console.log(code)
-
   const file = {
     'src/App.vue': decodeURIComponent(code)
   }
@@ -226,19 +224,36 @@ function handleClickSideBySide() {
   }
 }
 
-.one-at-a-time :deep(.right) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: auto !important;
+@media (min-width: 720px) {
+  .one-at-a-time :deep(.right) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto !important;
+  }
+  .displaying-preview :deep(.left) {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
 }
-
-.displaying-preview :deep(.left) {
-  opacity: 0;
-  pointer-events: none;
-  z-index: -1;
+@media (max-width: 721px) {
+  :deep(.left) {
+    position: static;
+  }
+  :deep(.split-pane) {
+    display: block !important;
+  }
+  :deep(.right) {
+    position: static;
+    margin-top: 10px;
+    opacity: 1 !important;
+  }
+  .tabs {
+    display: none !important;
+  }
 }
 
 .displaying-code :deep(.left),
@@ -289,5 +304,9 @@ button.active {
 
 :deep(.output-container) {
   height: 100% !important;
+}
+
+:deep(.toggler) {
+  display: none !important;
 }
 </style>

@@ -1,1 +1,3 @@
-# All the components
+# Components
+
+- [Alert](/components/alert)
