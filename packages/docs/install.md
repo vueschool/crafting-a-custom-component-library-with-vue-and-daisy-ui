@@ -68,7 +68,7 @@ export default {
   content: [
     './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}',
-    './node_modules/daisy-vue/**/*.{vue,ts}'
+    './node_modules/daisy-vue/src/{components,directives}/**/*.{vue,ts}'
   ]
 }
 ```

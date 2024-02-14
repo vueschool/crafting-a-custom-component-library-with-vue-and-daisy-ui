@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { DirectiveValueType as Shapes } from '@/directives/vMask/VMask'
-import { vMask } from '@/directives/vMask/VMask'
+import { vMask } from '../../directives/vMask/VMask'
 withDefaults(
   defineProps<{
     bgClass?: string

@@ -24,7 +24,10 @@ export default defineConfig({
       },
       {
         text: 'Components',
-        items: [{ text: 'Alert', link: '/components/alert' }]
+        items: [
+          { text: 'Alert', link: '/components/alert' },
+          { text: 'Rating', link: '/components/rating' }
+        ]
       }
     ],
 

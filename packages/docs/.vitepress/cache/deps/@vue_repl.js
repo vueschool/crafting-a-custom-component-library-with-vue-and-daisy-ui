@@ -4,7 +4,7 @@ import {
   debounce,
   getDefaultExportFromCjs,
   utoa
-} from "./chunk-6VU6BZIL.js";
+} from "./chunk-4BVXYH66.js";
 import {
   Fragment,
   Transition,
@@ -44,9 +44,6 @@ import {
   withKeys,
   withModifiers
 } from "./chunk-P5OTZ5A5.js";
-
-// ../../node_modules/.pnpm/@vue+repl@3.4.0/node_modules/@vue/repl/dist/vue-repl.js
-import "/Users/danielkelly/daisy-ui-component-course/node_modules/.pnpm/@vue+repl@3.4.0/node_modules/@vue/repl/dist/vue-repl.css";
 
 // ../../node_modules/.pnpm/vue@3.4.19_typescript@5.3.3/node_modules/vue/compiler-sfc/index.browser.mjs
 var index_browser_exports = {};
@@ -43377,7 +43374,8 @@ var errorMessages = __spreadValues(__spreadValues({}, errorMessages$1), DOMError
 var walk = walk$2;
 var shouldTransformRef = () => false;
 
-// ../../node_modules/.pnpm/@vue+repl@3.4.0/node_modules/@vue/repl/dist/vue-repl.js
+// ../../node_modules/.pnpm/@vue+repl@2.9.0/node_modules/@vue/repl/dist/vue-repl.js
+var _hoisted_1$5 = ["onMousedown"];
 var _sfc_main$7 = defineComponent({
   __name: "SplitPane",
   props: {
@@ -43436,7 +43434,7 @@ var _sfc_main$7 = defineComponent({
           createBaseVNode("div", {
             class: "dragger",
             onMousedown: withModifiers(dragStart, ["prevent"])
-          }, null, 32)
+          }, null, 40, _hoisted_1$5)
         ], 4),
         createBaseVNode("div", {
           class: "right",
@@ -43459,13 +43457,10 @@ var _export_sfc = (sfc, props) => {
   }
   return target;
 };
-var SplitPane = _export_sfc(_sfc_main$7, [["__scopeId", "data-v-6441de5b"]]);
+var SplitPane = _export_sfc(_sfc_main$7, [["__scopeId", "data-v-b004c5a4"]]);
 var _sfc_main$6 = defineComponent({
   __name: "Message",
-  props: {
-    err: {},
-    warn: {}
-  },
+  props: ["err", "warn"],
   setup(__props) {
     const props = __props;
     const dismissed = ref(false);
@@ -43490,11 +43485,11 @@ var _sfc_main$6 = defineComponent({
     return (_ctx, _cache) => {
       return openBlock(), createBlock(Transition, { name: "fade" }, {
         default: withCtx(() => [
-          !dismissed.value && (_ctx.err || _ctx.warn) ? (openBlock(), createElementBlock("div", {
+          !dismissed.value && (__props.err || __props.warn) ? (openBlock(), createElementBlock("div", {
             key: 0,
-            class: normalizeClass(["msg", _ctx.err ? "err" : "warn"])
+            class: normalizeClass(["msg", __props.err ? "err" : "warn"])
           }, [
-            createBaseVNode("pre", null, toDisplayString(formatMessage(_ctx.err || _ctx.warn)), 1),
+            createBaseVNode("pre", null, toDisplayString(formatMessage(__props.err || __props.warn)), 1),
             createBaseVNode("button", {
               class: "dismiss",
               onClick: _cache[0] || (_cache[0] = ($event) => dismissed.value = true)
@@ -43506,8 +43501,8 @@ var _sfc_main$6 = defineComponent({
     };
   }
 });
-var Message = _export_sfc(_sfc_main$6, [["__scopeId", "data-v-b80ebbc9"]]);
-var srcdoc = "<!doctype html>\n<html>\n  <head>\n    <style>\n      html.dark {\n        color: white;\n        background: #1e1e1e;\n      }\n      body {\n        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,\n          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n      }\n    </style>\n    <!-- PREVIEW-OPTIONS-HEAD-HTML -->\n    <script>\n      ;(() => {\n        let scriptEls = []\n\n        window.process = { env: {} }\n        window.__modules__ = {}\n\n        window.__export__ = (mod, key, get) => {\n          Object.defineProperty(mod, key, {\n            enumerable: true,\n            configurable: true,\n            get,\n          })\n        }\n\n        window.__dynamic_import__ = (key) => {\n          return Promise.resolve(window.__modules__[key])\n        }\n\n        async function handle_message(ev) {\n          let { action, cmd_id } = ev.data\n          const send_message = (payload) =>\n            parent.postMessage({ ...payload }, ev.origin)\n          const send_reply = (payload) => send_message({ ...payload, cmd_id })\n          const send_ok = () => send_reply({ action: 'cmd_ok' })\n          const send_error = (message, stack) =>\n            send_reply({ action: 'cmd_error', message, stack })\n\n          if (action === 'eval') {\n            try {\n              if (scriptEls.length) {\n                scriptEls.forEach((el) => {\n                  document.head.removeChild(el)\n                })\n                scriptEls.length = 0\n              }\n\n              let { script: scripts } = ev.data.args\n              if (typeof scripts === 'string') scripts = [scripts]\n\n              for (const script of scripts) {\n                const scriptEl = document.createElement('script')\n                scriptEl.setAttribute('type', 'module')\n                // send ok in the module script to ensure sequential evaluation\n                // of multiple proxy.eval() calls\n                const done = new Promise((resolve) => {\n                  window.__next__ = resolve\n                })\n                scriptEl.innerHTML = script + `\\nwindow.__next__()`\n                document.head.appendChild(scriptEl)\n                scriptEl.onerror = (err) => send_error(err.message, err.stack)\n                scriptEls.push(scriptEl)\n                await done\n              }\n              send_ok()\n            } catch (e) {\n              send_error(e.message, e.stack)\n            }\n          }\n\n          if (action === 'catch_clicks') {\n            try {\n              const top_origin = ev.origin\n              document.body.addEventListener('click', (event) => {\n                if (event.which !== 1) return\n                if (event.metaKey || event.ctrlKey || event.shiftKey) return\n                if (event.defaultPrevented) return\n\n                // ensure target is a link\n                let el = event.target\n                while (el && el.nodeName !== 'A') el = el.parentNode\n                if (!el || el.nodeName !== 'A') return\n\n                if (\n                  el.hasAttribute('download') ||\n                  el.getAttribute('rel') === 'external' ||\n                  el.target ||\n                  el.href.startsWith('javascript:') ||\n                  !el.href\n                )\n                  return\n\n                event.preventDefault()\n\n                if (el.href.startsWith(top_origin)) {\n                  const url = new URL(el.href)\n                  if (url.hash[0] === '#') {\n                    window.location.hash = url.hash\n                    return\n                  }\n                }\n\n                window.open(el.href, '_blank')\n              })\n              send_ok()\n            } catch (e) {\n              send_error(e.message, e.stack)\n            }\n          }\n        }\n\n        window.addEventListener('message', handle_message, false)\n\n        window.onerror = function (msg, url, lineNo, columnNo, error) {\n          // ignore errors from import map polyfill - these are necessary for\n          // it to detect browser support\n          if (msg.includes('module specifier “vue”')) {\n            // firefox only error, ignore\n            return false\n          }\n          if (msg.includes(\"Module specifier, 'vue\")) {\n            // Safari only\n            return false\n          }\n          try {\n            parent.postMessage({ action: 'error', value: error }, '*')\n          } catch (e) {\n            parent.postMessage({ action: 'error', value: msg }, '*')\n          }\n        }\n\n        window.addEventListener('unhandledrejection', (event) => {\n          if (\n            event.reason.message &&\n            event.reason.message.includes('Cross-origin')\n          ) {\n            event.preventDefault()\n            return\n          }\n          try {\n            parent.postMessage(\n              { action: 'unhandledrejection', value: event.reason },\n              '*',\n            )\n          } catch (e) {\n            parent.postMessage(\n              { action: 'unhandledrejection', value: event.reason.message },\n              '*',\n            )\n          }\n        })\n\n        let previous = { level: null, args: null }\n\n        ;['clear', 'log', 'info', 'dir', 'warn', 'error', 'table'].forEach(\n          (level) => {\n            const original = console[level]\n            console[level] = (...args) => {\n              const msg = args[0]\n              if (typeof msg === 'string') {\n                if (\n                  msg.includes('You are running a development build of Vue') ||\n                  msg.includes('You are running the esm-bundler build of Vue')\n                ) {\n                  return\n                }\n              }\n\n              original(...args)\n\n              const stringifiedArgs = stringify(args)\n              if (\n                previous.level === level &&\n                previous.args &&\n                previous.args === stringifiedArgs\n              ) {\n                parent.postMessage(\n                  { action: 'console', level, duplicate: true },\n                  '*',\n                )\n              } else {\n                previous = { level, args: stringifiedArgs }\n\n                try {\n                  parent.postMessage({ action: 'console', level, args }, '*')\n                } catch (err) {\n                  parent.postMessage(\n                    { action: 'console', level, args: args.map(toString) },\n                    '*',\n                  )\n                }\n              }\n            }\n          },\n        )\n        ;[\n          { method: 'group', action: 'console_group' },\n          { method: 'groupEnd', action: 'console_group_end' },\n          { method: 'groupCollapsed', action: 'console_group_collapsed' },\n        ].forEach((group_action) => {\n          const original = console[group_action.method]\n          console[group_action.method] = (label) => {\n            parent.postMessage({ action: group_action.action, label }, '*')\n\n            original(label)\n          }\n        })\n\n        const timers = new Map()\n        const original_time = console.time\n        const original_timelog = console.timeLog\n        const original_timeend = console.timeEnd\n\n        console.time = (label = 'default') => {\n          original_time(label)\n          timers.set(label, performance.now())\n        }\n        console.timeLog = (label = 'default') => {\n          original_timelog(label)\n          const now = performance.now()\n          if (timers.has(label)) {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-log',\n                args: [`${label}: ${now - timers.get(label)}ms`],\n              },\n              '*',\n            )\n          } else {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-warn',\n                args: [`Timer '${label}' does not exist`],\n              },\n              '*',\n            )\n          }\n        }\n        console.timeEnd = (label = 'default') => {\n          original_timeend(label)\n          const now = performance.now()\n          if (timers.has(label)) {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-log',\n                args: [`${label}: ${now - timers.get(label)}ms`],\n              },\n              '*',\n            )\n          } else {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-warn',\n                args: [`Timer '${label}' does not exist`],\n              },\n              '*',\n            )\n          }\n          timers.delete(label)\n        }\n\n        const original_assert = console.assert\n        console.assert = (condition, ...args) => {\n          if (condition) {\n            const stack = new Error().stack\n            parent.postMessage(\n              { action: 'console', level: 'assert', args, stack },\n              '*',\n            )\n          }\n          original_assert(condition, ...args)\n        }\n\n        const counter = new Map()\n        const original_count = console.count\n        const original_countreset = console.countReset\n\n        console.count = (label = 'default') => {\n          counter.set(label, (counter.get(label) || 0) + 1)\n          parent.postMessage(\n            {\n              action: 'console',\n              level: 'system-log',\n              args: `${label}: ${counter.get(label)}`,\n            },\n            '*',\n          )\n          original_count(label)\n        }\n\n        console.countReset = (label = 'default') => {\n          if (counter.has(label)) {\n            counter.set(label, 0)\n          } else {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-warn',\n                args: `Count for '${label}' does not exist`,\n              },\n              '*',\n            )\n          }\n          original_countreset(label)\n        }\n\n        const original_trace = console.trace\n\n        console.trace = (...args) => {\n          const stack = new Error().stack\n          parent.postMessage(\n            { action: 'console', level: 'trace', args, stack },\n            '*',\n          )\n          original_trace(...args)\n        }\n\n        function toString(value) {\n          if (value instanceof Error) {\n            return value.message\n          }\n          for (const fn of [\n            String,\n            (v) => Object.prototype.toString.call(v),\n            (v) => typeof v,\n          ]) {\n            try {\n              return fn(value)\n            } catch (err) {}\n          }\n        }\n\n        function isComponentProxy(value) {\n          return (\n            value &&\n            typeof value === 'object' &&\n            value.__v_skip === true &&\n            typeof value.$nextTick === 'function' &&\n            value.$ &&\n            value._\n          )\n        }\n\n        function stringify(args) {\n          try {\n            return JSON.stringify(args, (key, value) => {\n              return isComponentProxy(value) ? '{component proxy}' : value\n            })\n          } catch (error) {\n            return null\n          }\n        }\n      })()\n    <\/script>\n\n    <!-- ES Module Shims: Import maps polyfill for modules browsers without import maps support (all except Chrome 89+) -->\n    <script\n      async\n      src=\"https://cdn.jsdelivr.net/npm/es-module-shims@1.5.18/dist/es-module-shims.wasm.js\"\n    ><\/script>\n    <script type=\"importmap\">\n      <!--IMPORT_MAP-->\n    <\/script>\n  </head>\n  <body>\n    <!--PREVIEW-OPTIONS-PLACEHOLDER-HTML-->\n  </body>\n</html>\n";
+var Message = _export_sfc(_sfc_main$6, [["__scopeId", "data-v-3057e65b"]]);
+var srcdoc = "<!doctype html>\n<html>\n  <head>\n    <style>\n      body {\n        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,\n          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n      }\n    </style>\n    <!-- PREVIEW-OPTIONS-HEAD-HTML -->\n    <script>\n      ;(() => {\n        let scriptEls = []\n\n        window.process = { env: {} }\n        window.__modules__ = {}\n\n        window.__export__ = (mod, key, get) => {\n          Object.defineProperty(mod, key, {\n            enumerable: true,\n            configurable: true,\n            get,\n          })\n        }\n\n        window.__dynamic_import__ = (key) => {\n          return Promise.resolve(window.__modules__[key])\n        }\n\n        async function handle_message(ev) {\n          let { action, cmd_id } = ev.data\n          const send_message = (payload) =>\n            parent.postMessage({ ...payload }, ev.origin)\n          const send_reply = (payload) => send_message({ ...payload, cmd_id })\n          const send_ok = () => send_reply({ action: 'cmd_ok' })\n          const send_error = (message, stack) =>\n            send_reply({ action: 'cmd_error', message, stack })\n\n          if (action === 'eval') {\n            try {\n              if (scriptEls.length) {\n                scriptEls.forEach((el) => {\n                  document.head.removeChild(el)\n                })\n                scriptEls.length = 0\n              }\n\n              let { script: scripts } = ev.data.args\n              if (typeof scripts === 'string') scripts = [scripts]\n\n              for (const script of scripts) {\n                const scriptEl = document.createElement('script')\n                scriptEl.setAttribute('type', 'module')\n                // send ok in the module script to ensure sequential evaluation\n                // of multiple proxy.eval() calls\n                const done = new Promise((resolve) => {\n                  window.__next__ = resolve\n                })\n                scriptEl.innerHTML = script + `\\nwindow.__next__()`\n                document.head.appendChild(scriptEl)\n                scriptEl.onerror = (err) => send_error(err.message, err.stack)\n                scriptEls.push(scriptEl)\n                await done\n              }\n              send_ok()\n            } catch (e) {\n              send_error(e.message, e.stack)\n            }\n          }\n\n          if (action === 'catch_clicks') {\n            try {\n              const top_origin = ev.origin\n              document.body.addEventListener('click', (event) => {\n                if (event.which !== 1) return\n                if (event.metaKey || event.ctrlKey || event.shiftKey) return\n                if (event.defaultPrevented) return\n\n                // ensure target is a link\n                let el = event.target\n                while (el && el.nodeName !== 'A') el = el.parentNode\n                if (!el || el.nodeName !== 'A') return\n\n                if (\n                  el.hasAttribute('download') ||\n                  el.getAttribute('rel') === 'external' ||\n                  el.target ||\n                  el.href.startsWith('javascript:')\n                )\n                  return\n\n                event.preventDefault()\n\n                if (el.href.startsWith(top_origin)) {\n                  const url = new URL(el.href)\n                  if (url.hash[0] === '#') {\n                    window.location.hash = url.hash\n                    return\n                  }\n                }\n\n                window.open(el.href, '_blank')\n              })\n              send_ok()\n            } catch (e) {\n              send_error(e.message, e.stack)\n            }\n          }\n        }\n\n        window.addEventListener('message', handle_message, false)\n\n        window.onerror = function (msg, url, lineNo, columnNo, error) {\n          // ignore errors from import map polyfill - these are necessary for\n          // it to detect browser support\n          if (msg.includes('module specifier “vue”')) {\n            // firefox only error, ignore\n            return false\n          }\n          if (msg.includes(\"Module specifier, 'vue\")) {\n            // Safari only\n            return false\n          }\n          try {\n            parent.postMessage({ action: 'error', value: error }, '*')\n          } catch (e) {\n            parent.postMessage({ action: 'error', value: msg }, '*')\n          }\n        }\n\n        window.addEventListener('unhandledrejection', (event) => {\n          if (\n            event.reason.message &&\n            event.reason.message.includes('Cross-origin')\n          ) {\n            event.preventDefault()\n            return\n          }\n          try {\n            parent.postMessage(\n              { action: 'unhandledrejection', value: event.reason },\n              '*'\n            )\n          } catch (e) {\n            parent.postMessage(\n              { action: 'unhandledrejection', value: event.reason.message },\n              '*'\n            )\n          }\n        })\n\n        let previous = { level: null, args: null }\n\n        ;['clear', 'log', 'info', 'dir', 'warn', 'error', 'table'].forEach(\n          (level) => {\n            const original = console[level]\n            console[level] = (...args) => {\n              const msg = args[0]\n              if (typeof msg === 'string') {\n                if (\n                  msg.includes('You are running a development build of Vue') ||\n                  msg.includes('You are running the esm-bundler build of Vue')\n                ) {\n                  return\n                }\n              }\n\n              original(...args)\n\n              const stringifiedArgs = stringify(args)\n              if (\n                previous.level === level &&\n                previous.args &&\n                previous.args === stringifiedArgs\n              ) {\n                parent.postMessage(\n                  { action: 'console', level, duplicate: true },\n                  '*'\n                )\n              } else {\n                previous = { level, args: stringifiedArgs }\n\n                try {\n                  parent.postMessage({ action: 'console', level, args }, '*')\n                } catch (err) {\n                  parent.postMessage(\n                    { action: 'console', level, args: args.map(toString) },\n                    '*'\n                  )\n                }\n              }\n            }\n          }\n        )\n        ;[\n          { method: 'group', action: 'console_group' },\n          { method: 'groupEnd', action: 'console_group_end' },\n          { method: 'groupCollapsed', action: 'console_group_collapsed' },\n        ].forEach((group_action) => {\n          const original = console[group_action.method]\n          console[group_action.method] = (label) => {\n            parent.postMessage({ action: group_action.action, label }, '*')\n\n            original(label)\n          }\n        })\n\n        const timers = new Map()\n        const original_time = console.time\n        const original_timelog = console.timeLog\n        const original_timeend = console.timeEnd\n\n        console.time = (label = 'default') => {\n          original_time(label)\n          timers.set(label, performance.now())\n        }\n        console.timeLog = (label = 'default') => {\n          original_timelog(label)\n          const now = performance.now()\n          if (timers.has(label)) {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-log',\n                args: [`${label}: ${now - timers.get(label)}ms`],\n              },\n              '*'\n            )\n          } else {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-warn',\n                args: [`Timer '${label}' does not exist`],\n              },\n              '*'\n            )\n          }\n        }\n        console.timeEnd = (label = 'default') => {\n          original_timeend(label)\n          const now = performance.now()\n          if (timers.has(label)) {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-log',\n                args: [`${label}: ${now - timers.get(label)}ms`],\n              },\n              '*'\n            )\n          } else {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-warn',\n                args: [`Timer '${label}' does not exist`],\n              },\n              '*'\n            )\n          }\n          timers.delete(label)\n        }\n\n        const original_assert = console.assert\n        console.assert = (condition, ...args) => {\n          if (condition) {\n            const stack = new Error().stack\n            parent.postMessage(\n              { action: 'console', level: 'assert', args, stack },\n              '*'\n            )\n          }\n          original_assert(condition, ...args)\n        }\n\n        const counter = new Map()\n        const original_count = console.count\n        const original_countreset = console.countReset\n\n        console.count = (label = 'default') => {\n          counter.set(label, (counter.get(label) || 0) + 1)\n          parent.postMessage(\n            {\n              action: 'console',\n              level: 'system-log',\n              args: `${label}: ${counter.get(label)}`,\n            },\n            '*'\n          )\n          original_count(label)\n        }\n\n        console.countReset = (label = 'default') => {\n          if (counter.has(label)) {\n            counter.set(label, 0)\n          } else {\n            parent.postMessage(\n              {\n                action: 'console',\n                level: 'system-warn',\n                args: `Count for '${label}' does not exist`,\n              },\n              '*'\n            )\n          }\n          original_countreset(label)\n        }\n\n        const original_trace = console.trace\n\n        console.trace = (...args) => {\n          const stack = new Error().stack\n          parent.postMessage(\n            { action: 'console', level: 'trace', args, stack },\n            '*'\n          )\n          original_trace(...args)\n        }\n\n        function toString(value) {\n          if (value instanceof Error) {\n            return value.message\n          }\n          for (const fn of [\n            String,\n            (v) => Object.prototype.toString.call(v),\n            (v) => typeof v,\n          ]) {\n            try {\n              return fn(value)\n            } catch (err) {}\n          }\n        }\n\n        function isComponentProxy(value) {\n          return (\n            value &&\n            typeof value === 'object' &&\n            value.__v_skip === true &&\n            typeof value.$nextTick === 'function' &&\n            value.$ &&\n            value._\n          )\n        }\n\n        function stringify(args) {\n          try {\n            return JSON.stringify(args, (key, value) => {\n              return isComponentProxy(value) ? '{component proxy}' : value\n            })\n          } catch (error) {\n            return null\n          }\n        }\n      })()\n    <\/script>\n\n    <!-- ES Module Shims: Import maps polyfill for modules browsers without import maps support (all except Chrome 89+) -->\n    <script\n      async\n      src=\"https://cdn.jsdelivr.net/npm/es-module-shims@1.5.18/dist/es-module-shims.wasm.js\"\n    ><\/script>\n    <script type=\"importmap\">\n      <!--IMPORT_MAP-->\n    <\/script>\n  </head>\n  <body>\n    <!--PREVIEW-OPTIONS-PLACEHOLDER-HTML-->\n  </body>\n</html>\n";
 var uid = 1;
 var PreviewProxy = class {
   constructor(iframe, handlers) {
@@ -43856,7 +43851,6 @@ var _sfc_main$5 = defineComponent({
     const props = __props;
     const store = inject("store");
     const clearConsole = inject("clear-console");
-    const theme = inject("theme");
     const previewOptions = inject("preview-options");
     const container2 = ref();
     const runtimeError = ref();
@@ -43877,16 +43871,6 @@ var _sfc_main$5 = defineComponent({
       }
     );
     watch(() => store.state.resetFlip, createSandbox);
-    watch(
-      () => theme.value,
-      (value) => {
-        var _a2;
-        const html = (_a2 = sandbox.contentDocument) == null ? void 0 : _a2.documentElement;
-        if (html) {
-          html.className = value;
-        }
-      }
-    );
     onUnmounted(() => {
       proxy.destroy();
       stopUpdateWatcher && stopUpdateWatcher();
@@ -43917,7 +43901,7 @@ var _sfc_main$5 = defineComponent({
       if (!importMap.imports.vue) {
         importMap.imports.vue = store.state.vueRuntimeURL;
       }
-      const sandboxSrc = srcdoc.replace(/<html>/, `<html class="${theme.value}">`).replace(/<!--IMPORT_MAP-->/, JSON.stringify(importMap)).replace(
+      const sandboxSrc = srcdoc.replace(/<!--IMPORT_MAP-->/, JSON.stringify(importMap)).replace(
         /<!-- PREVIEW-OPTIONS-HEAD-HTML -->/,
         (previewOptions == null ? void 0 : previewOptions.headHTML) || ""
       ).replace(
@@ -43994,7 +43978,7 @@ Tip: edit the "Import Map" tab to specify import paths for dependencies.`;
         const mainFile = store.state.mainFile;
         if (isSSR && mainFile.endsWith(".vue")) {
           const ssrModules = compileModulesForPreview(store, true);
-          console.info(
+          console.log(
             `[@vue/repl] successfully compiled ${ssrModules.length} modules for SSR.`
           );
           await proxy.eval([
@@ -44018,14 +44002,16 @@ Tip: edit the "Import Map" tab to specify import paths for dependencies.`;
           ]);
         }
         const modules = compileModulesForPreview(store);
-        console.info(
+        console.log(
           `[@vue/repl] successfully compiled ${modules.length} module${modules.length > 1 ? `s` : ``}.`
         );
         const codeToEval = [
           `window.__modules__ = {};window.__css__ = [];if (window.__app__) window.__app__.unmount();` + (isSSR ? `` : `document.body.innerHTML = '<div id="app"></div>' + \`${(previewOptions == null ? void 0 : previewOptions.bodyHTML) || ""}\``),
           ...modules,
-          `document.querySelectorAll('style[css]').forEach(el => el.remove())
-        document.head.insertAdjacentHTML('beforeend', window.__css__.map(s => \`<style css>\${s}</style>\`).join('\\n'))`
+          `setTimeout(()=> {
+        document.querySelectorAll('style[css]').forEach(el => el.remove())
+        document.head.insertAdjacentHTML('beforeend', window.__css__.map(s => \`<style css>\${s}</style>\`).join('\\n'))
+      }, 1)`
         ];
         if (mainFile.endsWith(".vue")) {
           codeToEval.push(
@@ -44063,10 +44049,10 @@ Tip: edit the "Import Map" tab to specify import paths for dependencies.`;
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
         withDirectives(createBaseVNode("div", {
+          class: "iframe-container",
           ref_key: "container",
-          ref: container2,
-          class: normalizeClass(["iframe-container", unref(theme)])
-        }, null, 2), [
+          ref: container2
+        }, null, 512), [
           [vShow, _ctx.show]
         ]),
         createVNode(Message, { err: runtimeError.value }, null, 8, ["err"]),
@@ -44078,7 +44064,7 @@ Tip: edit the "Import Map" tab to specify import paths for dependencies.`;
     };
   }
 });
-var Preview = _export_sfc(_sfc_main$5, [["__scopeId", "data-v-a3c6fe17"]]);
+var Preview = _export_sfc(_sfc_main$5, [["__scopeId", "data-v-37f49e81"]]);
 var _hoisted_1$4 = { class: "tab-buttons" };
 var _hoisted_2$2 = ["onClick"];
 var _hoisted_3$2 = { class: "output-container" };
@@ -44109,13 +44095,12 @@ var _sfc_main$4 = defineComponent({
         createBaseVNode("div", _hoisted_1$4, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(modes.value, (m) => {
             return openBlock(), createElementBlock("button", {
-              key: m,
               class: normalizeClass({ active: mode.value === m }),
               onClick: ($event) => mode.value = m
             }, [
               createBaseVNode("span", null, toDisplayString(m), 1)
             ], 10, _hoisted_2$2);
-          }), 128))
+          }), 256))
         ]),
         createBaseVNode("div", _hoisted_3$2, [
           createVNode(Preview, {
@@ -44136,7 +44121,7 @@ var _sfc_main$4 = defineComponent({
     };
   }
 });
-var Output = _export_sfc(_sfc_main$4, [["__scopeId", "data-v-2db51f48"]]);
+var Output = _export_sfc(_sfc_main$4, [["__scopeId", "data-v-f221f6e0"]]);
 var ContextualKeyword;
 (function(ContextualKeyword2) {
   const NONE = 0;
@@ -66167,7 +66152,7 @@ async function transformTS(src) {
   }).code;
 }
 async function compileFile(store, { filename, code: code2, compiled }) {
-  var _a2, _b2, _c, _d, _e;
+  var _a2, _b2, _c;
   if (!code2.trim()) {
     return [];
   }
@@ -66199,8 +66184,7 @@ async function compileFile(store, { filename, code: code2, compiled }) {
   const id3 = hashId(filename);
   const { errors: errors2, descriptor } = store.compiler.parse(code2, {
     filename,
-    sourceMap: true,
-    templateParseOptions: (_b2 = (_a2 = store.options) == null ? void 0 : _a2.template) == null ? void 0 : _b2.compilerOptions
+    sourceMap: true
   });
   if (errors2.length) {
     return errors2;
@@ -66253,7 +66237,7 @@ async function compileFile(store, { filename, code: code2, compiled }) {
   } else {
     ssrCode += clientScript;
   }
-  if (descriptor.template && (!descriptor.scriptSetup || ((_d = (_c = store.options) == null ? void 0 : _c.script) == null ? void 0 : _d.inlineTemplate) === false)) {
+  if (descriptor.template && (!descriptor.scriptSetup || ((_b2 = (_a2 = store.options) == null ? void 0 : _a2.script) == null ? void 0 : _b2.inlineTemplate) === false)) {
     const clientTemplateResult = await doCompileTemplate2(
       store,
       descriptor,
@@ -66311,7 +66295,7 @@ ${COMP_IDENTIFIER}.__scopeId = ${JSON.stringify(`data-v-${id3}`)}`
       return [`<style module> is not supported in the playground.`];
     }
     const styleResult = await store.compiler.compileStyleAsync({
-      ...(_e = store.options) == null ? void 0 : _e.style,
+      ...(_c = store.options) == null ? void 0 : _c.style,
       source: style.content,
       filename,
       id: id3,
@@ -66391,7 +66375,6 @@ async function doCompileTemplate2(store, descriptor, id3, bindingMetadata, ssr, 
   let { code: code2, errors: errors2 } = store.compiler.compileTemplate({
     isProd: false,
     ...(_a2 = store.options) == null ? void 0 : _a2.template,
-    ast: descriptor.template.ast,
     source: descriptor.template.content,
     filename: descriptor.filename,
     id: id3,
@@ -66486,23 +66469,19 @@ var ReplStore = class {
     showOutput = false,
     outputMode = "preview",
     productionMode = false,
-    customElement = /\.ce\.vue$/,
-    welcomeFileTemplate = welcomeCode,
-    newSFCTemplate = newSFCCode
+    customElement = /\.ce\.vue$/
   } = {}) {
     this.compiler = index_browser_exports;
     this.productionMode = false;
     this.pendingCompiler = null;
     const files = {};
-    this.welcomeFileTemplate = welcomeFileTemplate;
-    this.newSFCTemplate = newSFCTemplate;
     if (serializedState) {
       const saved = JSON.parse(atou(serializedState));
       for (const filename in saved) {
         setFile(files, filename, saved[filename]);
       }
     } else {
-      setFile(files, defaultMainFile, this.welcomeFileTemplate);
+      setFile(files, defaultMainFile, welcomeCode);
     }
     this.productionMode = productionMode;
     this.defaultVueRuntimeDevURL = defaultVueRuntimeURL;
@@ -66587,15 +66566,10 @@ var ReplStore = class {
     this.state.activeFile = this.state.files[filename];
   }
   addFile(fileOrFilename) {
-    let file;
-    if (typeof fileOrFilename === "string") {
-      file = new File2(
-        fileOrFilename,
-        fileOrFilename.endsWith(".vue") ? this.newSFCTemplate : ""
-      );
-    } else {
-      file = fileOrFilename;
-    }
+    const file = typeof fileOrFilename === "string" ? new File2(
+      fileOrFilename,
+      fileOrFilename.endsWith(".vue") ? newSFCCode : ""
+    ) : fileOrFilename;
     this.state.files[file.filename] = file;
     if (!file.hidden)
       this.setActive(file.filename);
@@ -66638,7 +66612,7 @@ var ReplStore = class {
     const files = this.getFiles();
     const importMap = files[importMapFile];
     if (importMap) {
-      const { imports, ...restImportMap } = JSON.parse(importMap);
+      const { imports } = JSON.parse(importMap);
       if (imports["vue"] === this.defaultVueRuntimeURL) {
         delete imports["vue"];
       }
@@ -66648,11 +66622,7 @@ var ReplStore = class {
       if (!Object.keys(imports).length) {
         delete files[importMapFile];
       } else {
-        files[importMapFile] = JSON.stringify(
-          { imports, ...restImportMap },
-          null,
-          2
-        );
+        files[importMapFile] = JSON.stringify({ imports }, null, 2);
       }
     }
     return "#" + utoa(JSON.stringify(files));
@@ -66673,15 +66643,14 @@ var ReplStore = class {
     for (const filename in newFiles) {
       setFile(files, filename, newFiles[filename]);
     }
-    const errors2 = [];
+    this.state.errors = [];
     for (const file in files) {
-      errors2.push(...await compileFile(this, files[file]));
+      this.state.errors.push(...await compileFile(this, files[file]));
     }
-    this.state.errors = errors2;
-    this.state.mainFile = addSrcPrefix(mainFile);
+    this.state.mainFile = mainFile;
     this.state.files = files;
     this.initImportMap();
-    this.setActive(this.state.mainFile);
+    this.setActive(mainFile);
     this.forceSandboxReset();
   }
   forceSandboxReset() {
@@ -66719,7 +66688,7 @@ var ReplStore = class {
           );
         }
         map2.code = JSON.stringify(json, null, 2);
-      } catch {
+      } catch (e) {
       }
     }
   }
@@ -66786,11 +66755,8 @@ var ReplStore = class {
   }
 };
 function setFile(files, filename, content) {
-  const normalized = addSrcPrefix(filename);
+  const normalized = filename !== importMapFile && filename !== tsconfigFile && !filename.startsWith("src/") ? `src/${filename}` : filename;
   files[normalized] = new File2(normalized, content);
-}
-function addSrcPrefix(file) {
-  return file === importMapFile || file === tsconfigFile || file.startsWith("src/") ? file : `src/${file}`;
 }
 function fixURL(url) {
   return url.replace("https://sfc.vuejs", "https://play.vuejs");
@@ -66798,7 +66764,7 @@ function fixURL(url) {
 function stripSrcPrefix(file) {
   return file.replace(/^src\//, "");
 }
-var _withScopeId$1 = (n2) => (pushScopeId("data-v-c321f1af"), n2 = n2(), popScopeId(), n2);
+var _withScopeId$1 = (n2) => (pushScopeId("data-v-f661725b"), n2 = n2(), popScopeId(), n2);
 var _hoisted_1$3 = ["onClick", "onDblclick"];
 var _hoisted_2$1 = { class: "label" };
 var _hoisted_3$1 = ["onClick"];
@@ -66826,15 +66792,19 @@ var _hoisted_4 = _withScopeId$1(() => createBaseVNode("svg", {
 var _hoisted_5 = [
   _hoisted_4
 ];
-var _hoisted_6 = { class: "file pending" };
-var _hoisted_7 = { class: "import-map-wrapper" };
-var _hoisted_8 = _withScopeId$1(() => createBaseVNode("span", { class: "label" }, "tsconfig.json", -1));
-var _hoisted_9 = [
-  _hoisted_8
+var _hoisted_6 = {
+  key: 1,
+  class: "file pending"
+};
+var _hoisted_7 = ["onKeyup"];
+var _hoisted_8 = { class: "import-map-wrapper" };
+var _hoisted_9 = _withScopeId$1(() => createBaseVNode("span", { class: "label" }, "tsconfig.json", -1));
+var _hoisted_10 = [
+  _hoisted_9
 ];
-var _hoisted_10 = _withScopeId$1(() => createBaseVNode("span", { class: "label" }, "Import Map", -1));
-var _hoisted_11 = [
-  _hoisted_10
+var _hoisted_11 = _withScopeId$1(() => createBaseVNode("span", { class: "label" }, "Import Map", -1));
+var _hoisted_12 = [
+  _hoisted_11
 ];
 var _sfc_main$3 = defineComponent({
   __name: "FileSelector",
@@ -66916,13 +66886,13 @@ var _sfc_main$3 = defineComponent({
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", {
-        ref_key: "fileSel",
-        ref: fileSel,
         class: normalizeClass(["file-selector", { "has-import-map": unref(showImportMap) }]),
-        onWheel: horizontalScroll
+        onWheel: horizontalScroll,
+        ref_key: "fileSel",
+        ref: fileSel
       }, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(files.value, (file, i) => {
-          return openBlock(), createElementBlock(Fragment, { key: file }, [
+          return openBlock(), createElementBlock(Fragment, null, [
             pending.value !== file ? (openBlock(), createElementBlock("div", {
               key: 0,
               class: normalizeClass(["file", { active: unref(store).state.activeFile.filename === file }]),
@@ -66936,11 +66906,7 @@ var _sfc_main$3 = defineComponent({
                 onClick: withModifiers(($event) => unref(store).deleteFile(file), ["stop"])
               }, _hoisted_5, 8, _hoisted_3$1)) : createCommentVNode("", true)
             ], 42, _hoisted_1$3)) : createCommentVNode("", true),
-            pending.value === true && i === files.value.length - 1 || pending.value === file ? (openBlock(), createElementBlock("div", {
-              key: 1,
-              class: normalizeClass(["file pending", { active: pending.value === file }])
-            }, [
-              createBaseVNode("span", _hoisted_6, toDisplayString(pendingFilename.value), 1),
+            pending.value === true && i === files.value.length - 1 || pending.value === file ? (openBlock(), createElementBlock("div", _hoisted_6, [
               withDirectives(createBaseVNode("input", {
                 "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => pendingFilename.value = $event),
                 spellcheck: "false",
@@ -66950,33 +66916,33 @@ var _sfc_main$3 = defineComponent({
                   withKeys(cancelNameFile, ["esc"])
                 ],
                 onVnodeMounted: focus
-              }, null, 544), [
+              }, null, 40, _hoisted_7), [
                 [vModelText, pendingFilename.value]
               ])
-            ], 2)) : createCommentVNode("", true)
+            ])) : createCommentVNode("", true)
           ], 64);
-        }), 128)),
+        }), 256)),
         createBaseVNode("button", {
           class: "add",
           onClick: startAddFile
         }, "+"),
-        createBaseVNode("div", _hoisted_7, [
-          unref(showTsConfig) && unref(store).state.files[unref(tsconfigFile)] ? (openBlock(), createElementBlock("div", {
+        createBaseVNode("div", _hoisted_8, [
+          unref(showTsConfig) ? (openBlock(), createElementBlock("div", {
             key: 0,
             class: normalizeClass(["file", { active: unref(store).state.activeFile.filename === unref(tsconfigFile) }]),
             onClick: _cache[1] || (_cache[1] = ($event) => unref(store).setActive(unref(tsconfigFile)))
-          }, _hoisted_9, 2)) : createCommentVNode("", true),
+          }, _hoisted_10, 2)) : createCommentVNode("", true),
           unref(showImportMap) ? (openBlock(), createElementBlock("div", {
             key: 1,
             class: normalizeClass(["file", { active: unref(store).state.activeFile.filename === unref(importMapFile) }]),
             onClick: _cache[2] || (_cache[2] = ($event) => unref(store).setActive(unref(importMapFile)))
-          }, _hoisted_11, 2)) : createCommentVNode("", true)
+          }, _hoisted_12, 2)) : createCommentVNode("", true)
         ])
       ], 34);
     };
   }
 });
-var FileSelector = _export_sfc(_sfc_main$3, [["__scopeId", "data-v-c321f1af"]]);
+var FileSelector = _export_sfc(_sfc_main$3, [["__scopeId", "data-v-f661725b"]]);
 var _withScopeId = (n2) => (pushScopeId("data-v-70b24951"), n2 = n2(), popScopeId(), n2);
 var _hoisted_1$2 = _withScopeId(() => createBaseVNode("span", null, "Show Error", -1));
 var _hoisted_2 = _withScopeId(() => createBaseVNode("div", { class: "indicator" }, null, -1));
@@ -66986,8 +66952,7 @@ var _hoisted_3 = [
 var _sfc_main$2 = defineComponent({
   __name: "MessageToggle",
   props: {
-    "modelValue": { type: Boolean },
-    "modelModifiers": {}
+    "modelValue": { type: Boolean }
   },
   emits: ["update:modelValue"],
   setup(__props) {
@@ -67035,10 +67000,10 @@ var _sfc_main$1 = defineComponent({
         createVNode(FileSelector),
         createBaseVNode("div", _hoisted_1$1, [
           createVNode(props.editorComponent, {
+            onChange: unref(onChange),
             value: unref(store).state.activeFile.code,
-            filename: unref(store).state.activeFile.filename,
-            onChange: unref(onChange)
-          }, null, 8, ["value", "filename", "onChange"]),
+            filename: unref(store).state.activeFile.filename
+          }, null, 8, ["onChange", "value", "filename"]),
           withDirectives(createVNode(Message, {
             err: unref(store).state.errors[0]
           }, null, 8, ["err"]), [
@@ -67053,7 +67018,7 @@ var _sfc_main$1 = defineComponent({
     };
   }
 });
-var EditorContainer = _export_sfc(_sfc_main$1, [["__scopeId", "data-v-6360fe62"]]);
+var EditorContainer = _export_sfc(_sfc_main$1, [["__scopeId", "data-v-3500c8e7"]]);
 var _hoisted_1 = { class: "vue-repl" };
 var _sfc_main = defineComponent({
   __name: "Repl",
@@ -67066,8 +67031,8 @@ var _sfc_main = defineComponent({
     showImportMap: { type: Boolean, default: true },
     showTsConfig: { type: Boolean, default: true },
     clearConsole: { type: Boolean, default: true },
-    sfcOptions: { default: () => ({}) },
-    layout: { default: "horizontal" },
+    sfcOptions: {},
+    layout: {},
     layoutReverse: { type: Boolean, default: false },
     ssr: { type: Boolean, default: false },
     previewOptions: { default: () => ({
@@ -67086,27 +67051,27 @@ var _sfc_main = defineComponent({
       throw new Error('The "editor" prop is now required.');
     }
     const outputRef = ref();
-    watchEffect(() => {
-      const { store } = props;
-      const sfcOptions = store.options = props.sfcOptions || {};
-      sfcOptions.script || (sfcOptions.script = {});
-      sfcOptions.script.fs = {
-        fileExists(file) {
-          if (file.startsWith("/"))
-            file = file.slice(1);
-          return !!store.state.files[file];
-        },
-        readFile(file) {
-          if (file.startsWith("/"))
-            file = file.slice(1);
-          return store.state.files[file].code;
-        }
-      };
-    });
-    props.store.init();
+    const { store } = props;
+    const sfcOptions = store.options = props.sfcOptions || {};
+    if (!sfcOptions.script) {
+      sfcOptions.script = {};
+    }
+    sfcOptions.script.fs = {
+      fileExists(file) {
+        if (file.startsWith("/"))
+          file = file.slice(1);
+        return !!store.state.files[file];
+      },
+      readFile(file) {
+        if (file.startsWith("/"))
+          file = file.slice(1);
+        return store.state.files[file].code;
+      }
+    };
+    store.init();
     const editorSlotName = computed(() => props.layoutReverse ? "right" : "left");
     const outputSlotName = computed(() => props.layoutReverse ? "left" : "right");
-    provide("store", props.store);
+    provide("store", store);
     provide("autoresize", props.autoResize);
     provide("import-map", toRef(props, "showImportMap"));
     provide("tsconfig", toRef(props, "showTsConfig"));
@@ -67122,16 +67087,16 @@ var _sfc_main = defineComponent({
       return openBlock(), createElementBlock("div", _hoisted_1, [
         createVNode(SplitPane, { layout: _ctx.layout }, {
           [editorSlotName.value]: withCtx(() => [
-            createVNode(EditorContainer, { "editor-component": _ctx.editor }, null, 8, ["editor-component"])
+            createVNode(EditorContainer, { editorComponent: _ctx.editor }, null, 8, ["editorComponent"])
           ]),
           [outputSlotName.value]: withCtx(() => [
             createVNode(Output, {
               ref_key: "outputRef",
               ref: outputRef,
-              "editor-component": _ctx.editor,
-              "show-compile-output": props.showCompileOutput,
+              editorComponent: _ctx.editor,
+              showCompileOutput: props.showCompileOutput,
               ssr: !!props.ssr
-            }, null, 8, ["editor-component", "show-compile-output", "ssr"])
+            }, null, 8, ["editorComponent", "showCompileOutput", "ssr"])
           ]),
           _: 2
         }, 1032, ["layout"])
@@ -67139,10 +67104,11 @@ var _sfc_main = defineComponent({
     };
   }
 });
+var Repl = _export_sfc(_sfc_main, [["__scopeId", "data-v-df86514b"]]);
 export {
   File2 as File,
   Preview,
-  _sfc_main as Repl,
+  Repl,
   ReplStore,
   compileFile
 };
