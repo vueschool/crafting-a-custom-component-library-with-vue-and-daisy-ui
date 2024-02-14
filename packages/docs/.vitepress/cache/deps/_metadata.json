@@ -1,31 +1,67 @@
 {
-  "hash": "263a3de4",
-  "configHash": "0d4d8300",
-  "lockfileHash": "0fd53424",
-  "browserHash": "4087bcb1",
+  "hash": "bb3c72c3",
+  "configHash": "b0ae69a3",
+  "lockfileHash": "edbe2b64",
+  "browserHash": "d0355ec2",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.4.19_typescript@5.3.3/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "bf2f4258",
+      "fileHash": "2bc72852",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@7.0.14/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "2f4ae677",
+      "fileHash": "59b21bfd",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.7.2_vue@3.4.19/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "f66354b8",
+      "fileHash": "a86b91da",
+      "needsInterop": false
+    },
+    "@vue/repl": {
+      "src": "../../../../../node_modules/.pnpm/@vue+repl@3.4.0/node_modules/@vue/repl/dist/vue-repl.js",
+      "file": "@vue_repl.js",
+      "fileHash": "650e6788",
+      "needsInterop": false
+    },
+    "@vue/repl/monaco-editor": {
+      "src": "../../../../../node_modules/.pnpm/@vue+repl@3.4.0/node_modules/@vue/repl/dist/monaco-editor.js",
+      "file": "@vue_repl_monaco-editor.js",
+      "fileHash": "d02a6db8",
+      "needsInterop": false
+    },
+    "@vue/repl/codemirror-editor": {
+      "src": "../../../../../node_modules/.pnpm/@vue+repl@3.4.0/node_modules/@vue/repl/dist/codemirror-editor.js",
+      "file": "@vue_repl_codemirror-editor.js",
+      "fileHash": "3f6d765c",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-TV5Z3XXK": {
+      "file": "chunk-TV5Z3XXK.js"
+    },
+    "onig-4quf_T-L-7ODC2EJJ": {
+      "file": "onig-4quf_T-L-7ODC2EJJ.js"
+    },
+    "highlight-CJzieDKQ-QHLTYRVM": {
+      "file": "highlight-CJzieDKQ-QHLTYRVM.js"
+    },
+    "chunk-YPCN2EIP": {
+      "file": "chunk-YPCN2EIP.js"
+    },
+    "chunk-KWQPLJ7U": {
+      "file": "chunk-KWQPLJ7U.js"
+    },
     "chunk-CZRJEBC5": {
       "file": "chunk-CZRJEBC5.js"
+    },
+    "chunk-JJCHJJ73": {
+      "file": "chunk-JJCHJJ73.js"
     }
   }
 }
