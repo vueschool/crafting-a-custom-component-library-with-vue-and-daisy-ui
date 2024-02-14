@@ -1,5 +1,6 @@
 import comps from './components/components'
 import type { App } from 'vue'
+import './assets/tailwind.css'
 
 export const components = comps
 export const DaisyVuePlugin = {

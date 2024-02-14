@@ -1,5 +1,13 @@
 # Installation
 
+This installation procedure is the recommended way of using this component library. It involves:
+
+- using alongside Tailwind and Daisy as a peer depenedency for maximum stylistic control
+- importing components on an as needed basis for the sake of performance (tree-shakable)
+
+> [!TIP]
+> This is the recommended approach for Vite users!
+
 ## Step 1. Install the Core Library
 
 ::: code-group
@@ -59,6 +67,8 @@ export default {
 
 ## Step 4. Tell Tailwind about the Daisy UI Vue Components
 
+This is necessary so that the JIT compiler can see the Tailwind and Daisy UI classes and include them in the generated CSS.
+
 :::code-group
 
 ```ts [tailwind.config.ts]
@@ -75,27 +85,17 @@ export default {
 
 :::
 
-## Step 5. Include the Library Styles
-
-:::code-group
-
-```ts [main.ts]
-import 'daisy-vue/style.css'
-```
-
-:::
-
-## Step 6. Import the Component of Your Choice and Start Using
+## Step 5. Import the Component of Your Choice and Start Using
 
 :::code-group
 
 ```vue [App.vue]
 <script setup lang="ts">
-import { DaisyAlert } from 'daisy-vue'
+import DaisyAlert from 'daisy-vue/alert'
 </script>
 
 <template>
-  <DaisyAlert> Hello from Daisy Vue </DaisyAlert>
+  <DaisyAlert type="success"> Great! You've Successfully Installed DaisyVue </DaisyAlert>
 </template>
 ```
 

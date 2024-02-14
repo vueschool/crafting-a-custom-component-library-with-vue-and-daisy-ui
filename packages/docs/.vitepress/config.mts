@@ -17,7 +17,9 @@ export default defineConfig({
       {
         text: 'Docs',
         items: [
-          { text: 'Install', link: '/install' },
+          { text: 'Install (Recommended)', link: '/install-recommended' },
+          { text: 'Install (Global Components)', link: '/install-global-components' },
+          { text: 'Install (Nuxt)', link: '/install-nuxt' },
           { text: 'Colors', link: '/colors' },
           { text: 'Themes', link: '/themes' }
         ]
