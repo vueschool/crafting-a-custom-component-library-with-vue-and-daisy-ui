@@ -7,4 +7,5 @@
 - [Tooltip](/components/tooltip)
 - [NavBar](/components/navbar)
 - [TestChangeset](/components/testchangeset)
+- [AnotherComponent](/components/anothercomponent)
 <!--do not remove - used by hygen-->

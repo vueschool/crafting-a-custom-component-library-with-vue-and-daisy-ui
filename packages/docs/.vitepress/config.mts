@@ -36,6 +36,7 @@ export default defineConfig({
           { text: 'Tooltip', link: '/components/tooltip' },
           { text: 'NavBar', link: '/components/navbar' },
           { text: 'TestChangeset', link: '/components/testchangeset' },
+          { text: 'AnotherComponent', link: '/components/anothercomponent' },
           // do not remove - used by hygen
         ]
       }

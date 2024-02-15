@@ -38,6 +38,10 @@
       "import": "./src/components/DaisyTestChangeset/DaisyTestChangeset.vue",
       "require": "./src/components/DaisyTestChangeset/DaisyTestChangeset.vue"
     },
+    "./AnotherComponent": {
+      "import": "./src/components/DaisyAnotherComponent/DaisyAnotherComponent.vue",
+      "require": "./src/components/DaisyAnotherComponent/DaisyAnotherComponent.vue"
+    },
     "./do-not-touch-replaced-by-hygen": null
   },
   "scripts": {
