@@ -19,6 +19,5 @@
     "daisy-vue": "workspace:^",
     "daisyui": "^4.6.1",
     "nuxt-daisy-vue": "workspace:^"
-  },
-  "version": null
+  }
 }
