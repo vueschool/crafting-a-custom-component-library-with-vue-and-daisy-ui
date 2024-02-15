@@ -34,6 +34,10 @@
       "import": "./src/components/DaisyRating/DaisyRating.vue",
       "require": "./src/components/DaisyRating/DaisyRating.vue"
     },
+    "./Card": {
+      "import": "./src/components/Card/Card.vue",
+      "require": "./src/components/Card/Card.vue"
+    },
     "./do-not-touch-replaced-by-hygen": null
   },
   "scripts": {

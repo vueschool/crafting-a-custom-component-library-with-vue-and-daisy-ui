@@ -1,5 +1,5 @@
 ---
-to: packages/library/src/components/<%=name%>/<%=name%>.story.vue
+to: packages/library/src/components/Daisy<%=name.replace(/^Daisy/i, '')%>/Daisy<%=name.replace(/^Daisy/i, '')%>.story.vue
 ---
 
 <script setup lang="ts">

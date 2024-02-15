@@ -32,6 +32,7 @@ export default defineConfig({
         items: [
           { text: 'Alert', link: '/components/alert' },
           { text: 'Rating', link: '/components/rating' },
+          { text: 'Card', link: '/components/card' },
           // do not remove - used by hygen
         ]
       }
