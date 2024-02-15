@@ -1,5 +1,5 @@
 ---
-to: packages/library/src/components/Daisy<%=name.replace(/^Daisy/i, '')%>/Daisy<%=name.replace(/^Daisy/i, '')%>.vue
+to: packages/library/src/components/<%= h.componentNameWithPrefix(name) %>/<%= h.componentNameWithPrefix(name) %>.vue
 ---
 
 <script setup lang="ts">
@@ -8,6 +8,6 @@ to: packages/library/src/components/Daisy<%=name.replace(/^Daisy/i, '')%>/Daisy<
 
 <template>
   <div>
-    Hello Daisy<%=name.replace(/^Daisy/i, '')%>
+    Hello <%= h.componentNameWithPrefix(name) %>
   </div>
 </template>

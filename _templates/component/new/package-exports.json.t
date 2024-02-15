@@ -2,9 +2,9 @@
 inject: true
 to: packages/library/package.json
 before: "./do-not-touch-replaced-by-hygen"
-skip_if: "./<%=name.replace(/^Daisy/i, '')%>"
+skip_if: "./<%= h.componentNameNoPrefix(name) %>"
 ---
-    "./<%=name.replace(/^Daisy/i, '')%>": {
-      "import": "./src/components/Daisy<%=name.replace(/^Daisy/i, '')%>/Daisy<%=name.replace(/^Daisy/i, '')%>.vue",
-      "require": "./src/components/Daisy<%=name.replace(/^Daisy/i, '')%>/Daisy<%=name.replace(/^Daisy/i, '')%>.vue"
+    "./<%= h.componentNameNoPrefix(name) %>": {
+      "import": "./src/components/<%= h.componentNameWithPrefix(name) %>/<%= h.componentNameWithPrefix(name) %>.vue",
+      "require": "./src/components/<%= h.componentNameWithPrefix(name) %>/<%= h.componentNameWithPrefix(name) %>.vue"
     },
