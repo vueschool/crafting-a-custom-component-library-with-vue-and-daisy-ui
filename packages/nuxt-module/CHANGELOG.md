@@ -1,5 +1,17 @@
 # nuxt-daisy-vue
 
+## 1.0.0
+
+### Major Changes
+
+- a9f0c32: feature: typescript support and proper treeshaking
+
+### Patch Changes
+
+- Updated dependencies [3681097]
+- Updated dependencies [a9f0c32]
+  - daisy-vue@1.0.0
+
 ## 0.0.1
 
 ### Patch Changes

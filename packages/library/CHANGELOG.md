@@ -1,5 +1,15 @@
 # daisy-vue
 
+## 1.0.0
+
+### Major Changes
+
+- a9f0c32: feature: typescript support and proper treeshaking
+
+### Patch Changes
+
+- 3681097: chore: cleanup unused testing components
+
 ## 0.1.0
 
 ### Minor Changes

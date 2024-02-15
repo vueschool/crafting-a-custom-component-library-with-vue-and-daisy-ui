@@ -1,5 +1,18 @@
 # docs
 
+## 1.0.0
+
+### Major Changes
+
+- a9f0c32: feature: typescript support and proper treeshaking
+
+### Patch Changes
+
+- 3681097: chore: cleanup unused testing components
+- Updated dependencies [3681097]
+- Updated dependencies [a9f0c32]
+  - daisy-vue@1.0.0
+
 ## 0.1.0
 
 ### Minor Changes

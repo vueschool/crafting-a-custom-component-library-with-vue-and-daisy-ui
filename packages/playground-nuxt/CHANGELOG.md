@@ -1,5 +1,14 @@
 # playground-nuxt
 
+## null
+
+### Patch Changes
+
+- Updated dependencies [3681097]
+- Updated dependencies [a9f0c32]
+  - daisy-vue@1.0.0
+  - nuxt-daisy-vue@1.0.0
+
 ## 0.0.1
 
 ### Patch Changes
