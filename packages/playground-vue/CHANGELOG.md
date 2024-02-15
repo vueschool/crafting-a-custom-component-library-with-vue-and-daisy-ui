@@ -4,6 +4,13 @@
 
 ### Patch Changes
 
+- Updated dependencies [d678b0f]
+  - daisy-vue@1.0.1
+
+## null
+
+### Patch Changes
+
 - Updated dependencies [3681097]
 - Updated dependencies [a9f0c32]
   - daisy-vue@1.0.0

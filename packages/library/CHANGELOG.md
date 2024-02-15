@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.0.1
+
+### Patch Changes
+
+- d678b0f: bugfix: remove non-existant component imports/exports
+
 ## 1.0.0
 
 ### Major Changes
