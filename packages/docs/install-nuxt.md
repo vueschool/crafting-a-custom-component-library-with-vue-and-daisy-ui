@@ -2,20 +2,20 @@
 
 DaisyVue comes with a Nuxt module that auto imports all components in a tree-shakable fashion.
 
-## Step 1. Install the DaisyVue Nuxt Module, Tailwind Nuxt Module, and DaisyUI
+## Step 1. Install the Necessary Dependencies
 
 ::: code-group
 
 ```npm
-npm install nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+npm install daisy-vue nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 
 ```pnpm
-pnpm add nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+pnpm add daisy-vue nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 
 ```yarn
-yarn add nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+yarn add daisy-vue nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 
 :::
@@ -42,7 +42,9 @@ import daisyui from 'daisyui'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./node_modules/daisy-vue/src/{components,directives}/**/*.vue'],
+  content: [
+    './node_modules/nuxt-daisy-vue/node_modules/daisy-vue/src/{components,directives}/**/*.vue'
+  ],
   theme: {
     extend: {}
   },

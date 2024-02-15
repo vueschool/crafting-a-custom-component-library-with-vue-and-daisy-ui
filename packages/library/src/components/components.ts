@@ -11,7 +11,7 @@ export default {
   DaisyButton,
   DaisyAlert,
   DaisyRating,
-  TestChangeset,
-  AnotherComponent,
+  DaisyTestChangeset,
+  DaisyAnotherComponent,
   // export - do not remove this line, used for hygen generations
 }

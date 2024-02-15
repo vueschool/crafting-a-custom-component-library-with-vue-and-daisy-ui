@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-playground",
+  "name": "playground-nuxt",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.11.2",
+    "daisy-vue": "workspace:^",
     "daisyui": "^4.6.1",
     "nuxt-daisy-vue": "workspace:^"
   }
