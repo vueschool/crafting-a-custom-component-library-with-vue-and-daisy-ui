@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DaisyRating from 'daisy-vue/DaisyRating'
+import DaisyRating from 'daisy-vue/Rating'
 </script>
 
 # Rating Component

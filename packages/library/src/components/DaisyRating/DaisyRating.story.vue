@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+// import { reactive } from 'vue'
 import DaisyRating from './DaisyRating.vue'
 
-const state = reactive({})
+// const state = reactive({})
 </script>
 <template>
   <Story :layout="{ type: 'grid', width: '100%' }">

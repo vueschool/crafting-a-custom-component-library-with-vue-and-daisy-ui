@@ -38,7 +38,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "run-p type-check \"build-only {@}\" -- && pnpm run generate:types",
+    "generate:types": "vue-tsc --declaration --emitDeclarationOnly --outdir ./dist",
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",

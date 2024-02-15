@@ -6,15 +6,15 @@ DaisyVue comes with a Nuxt module that auto imports all components in a tree-sha
 
 ::: code-group
 
-```npm bash
+```npm
 npm install nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 
-```pnpm bash
+```pnpm
 pnpm add nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 
-```yarn bash
+```yarn
 yarn add nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 

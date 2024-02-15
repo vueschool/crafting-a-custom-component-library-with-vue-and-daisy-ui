@@ -1,4 +1,9 @@
-import { defineNuxtModule, addPlugin, createResolver, addComponent } from '@nuxt/kit'
+import {
+  defineNuxtModule,
+  // addPlugin,
+  // createResolver,
+  addComponent
+} from '@nuxt/kit'
 import { components as DaisyVueComponents } from 'daisy-vue'
 
 // Module options TypeScript interface definition
@@ -11,6 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {},
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   setup(options, nuxt) {
     // const resolver = createResolver(import.meta.url)
 

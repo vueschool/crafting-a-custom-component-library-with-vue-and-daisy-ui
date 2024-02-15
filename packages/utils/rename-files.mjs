@@ -1,9 +1,9 @@
 import fs from 'fs'
-import { fileURLToPath, URL } from 'node:url'
+// import { fileURLToPath, URL } from 'node:url'
 
-const path = fileURLToPath(new URL('./', import.meta.url))
+// const path = fileURLToPath(new URL('./', import.meta.url))
 
-function getAllFilesAndFoldersRecursively(path, ignore = []) {
+export function getAllFilesAndFoldersRecursively(path, ignore = []) {
   path = path.replace(/\/$/, '')
   const files = fs.readdirSync(path)
   const filesAndFolders = files.map((file) => {
@@ -25,7 +25,7 @@ function getAllFilesAndFoldersRecursively(path, ignore = []) {
   return filesAndFolders.flat()
 }
 
-function findAndReplaceFileAndFolderNamesRecursively(find, replace, path, ignore = []) {
+export function findAndReplaceFileAndFolderNamesRecursively(find, replace, path, ignore = []) {
   let renamed = []
   path = path.replace(/\/$/, '')
   const files = fs.readdirSync(path)
@@ -60,6 +60,6 @@ function findAndReplaceFileAndFolderNamesRecursively(find, replace, path, ignore
   return renamed
 }
 
-console.log(
-  findAndReplaceFileAndFolderNamesRecursively(/Daisy/, 'Dude', path, ['node_modules', '.git'])
-)
+// console.log(
+//   findAndReplaceFileAndFolderNamesRecursively(/Daisy/, 'Dude', path, ['node_modules', '.git'])
+// )

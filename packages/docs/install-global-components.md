@@ -14,15 +14,15 @@ It involves:
 
 ::: code-group
 
-```npm bash
+```npm
 npm install daisy-vue
 ```
 
-```pnpm bash
+```pnpm
 pnpm add daisy-vue
 ```
 
-```yarn bash
+```yarn
 yarn add daisy-vue
 ```
 
