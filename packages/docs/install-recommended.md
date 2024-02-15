@@ -91,7 +91,7 @@ export default {
 
 ```vue [App.vue]
 <script setup lang="ts">
-import DaisyAlert from 'daisy-vue/alert'
+import DaisyAlert from 'daisy-vue/Alert'
 </script>
 
 <template>

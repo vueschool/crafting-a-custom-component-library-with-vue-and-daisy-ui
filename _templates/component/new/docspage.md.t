@@ -1,17 +1,17 @@
 ---
-to: packages/docs/components/<%=name.toLowerCase()%>.md
+to: packages/docs/components/<%=name.replace(/^Daisy/i, '').toLowerCase()%>.md
 ---
 
 <script setup lang="ts">
-import <%=name%> from 'daisy-vue/<%=name%>'
+import Daisy<%=name.replace(/^Daisy/i, '')%> from 'daisy-vue/<%=name.replace(/^Daisy/i, '')%>'
 </script>
 
-# <%=h.capitalize(name)%> Component
+# <%=h.capitalize(name.replace(/^Daisy/i, ''))%> Component
 
 ## Without any props
 
-<<%=name%>/>
+<Daisy<%=name.replace(/^Daisy/i, '')%>/>
 
 ```vue
-<<%=name%> />
+<Daisy<%=name.replace(/^Daisy/i, '')%> />
 ```

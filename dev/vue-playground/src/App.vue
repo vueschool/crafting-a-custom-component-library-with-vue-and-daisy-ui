@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import DaisyAlert from 'daisy-vue/DaisyAlert'
+// not necessary to import here if using the plugin to install comps globally
+import DaisyAlert from 'daisy-vue/Alert'
 </script>
 
 <template>

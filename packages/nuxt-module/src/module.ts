@@ -17,7 +17,7 @@ export default defineNuxtModule<ModuleOptions>({
     for (const key in DaisyVueComponents) {
       addComponent({
         name: key, // name of the component to be used in vue templates
-        filePath: `daisy-vue/${key}`
+        filePath: `daisy-vue/${key.replace(/^Daisy/, '')}`
       })
     }
   }

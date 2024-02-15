@@ -22,15 +22,15 @@
       "import": "./dist/style.css",
       "require": "./dist/style.css"
     },
-    "./DaisyAlert": {
+    "./Alert": {
       "import": "./src/components/DaisyAlert/DaisyAlert.vue",
       "require": "./src/components/DaisyAlert/DaisyAlert.vue"
     },
-    "./DaisyButton": {
+    "./Button": {
       "import": "./src/components/DaisyButton/DaisyButton.vue",
       "require": "./src/components/DaisyButton/DaisyButton.vue"
     },
-    "./DaisyRating": {
+    "./Rating": {
       "import": "./src/components/DaisyRating/DaisyRating.vue",
       "require": "./src/components/DaisyRating/DaisyRating.vue"
     },
