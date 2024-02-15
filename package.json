@@ -17,8 +17,8 @@
     "story:preview": "pnpm --filter daisy-vue story:preview",
     "lib:build": "pnpm --filter daisy-vue build",
     "nuxt-module:dev-prepare": "pnpm --filter nuxt-daisy-vue dev:prepare",
-    "new:component": "hygen component new",
-    "new:directive": "hygen directive new"
+    "component:new": "hygen component new",
+    "directive:new": "hygen directive new"
   },
   "keywords": [],
   "author": "",
