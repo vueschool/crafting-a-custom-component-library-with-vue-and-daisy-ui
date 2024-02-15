@@ -2,7 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 
-import PlaygroundWrapper from '../components/PlaygroundWrapper.vue'
+// import PlaygroundWrapper from '../components/PlaygroundWrapper.vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
@@ -13,7 +13,7 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp({ app, router, siteData }) {
-    app.component('VuePlayground', PlaygroundWrapper)
-  }
+  // enhanceApp({ app, router, siteData }) {
+  //   app.component('VuePlayground', PlaygroundWrapper)
+  // }
 } satisfies Theme

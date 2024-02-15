@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { VueReplMdPlugin } from 'vitepress-plugin-vue-repl'
+// import { VueReplMdPlugin } from 'vitepress-plugin-vue-repl'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -32,11 +32,6 @@ export default defineConfig({
         items: [
           { text: 'Alert', link: '/components/alert' },
           { text: 'Rating', link: '/components/rating' },
-          { text: 'Slider', link: '/components/slider' },
-          { text: 'Tooltip', link: '/components/tooltip' },
-          { text: 'NavBar', link: '/components/navbar' },
-          { text: 'TestChangeset', link: '/components/testchangeset' },
-          { text: 'AnotherComponent', link: '/components/anothercomponent' },
           // do not remove - used by hygen
         ]
       }
@@ -44,9 +39,9 @@ export default defineConfig({
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
   },
-  markdown: {
-    config: (md) => {
-      md.use(VueReplMdPlugin)
-    }
-  }
+  // markdown: {
+  //   config: (md) => {
+  //     md.use(VueReplMdPlugin)
+  //   }
+  // }
 })
