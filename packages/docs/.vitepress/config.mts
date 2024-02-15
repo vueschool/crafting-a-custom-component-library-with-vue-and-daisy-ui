@@ -10,7 +10,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Components', link: '/components' },
-      { text: 'Stories', link: 'http://localhost:6006' }
+      { text: 'Stories', link: 'https://daisy-vue-stories.netlify.app/' }
     ],
 
     sidebar: [
