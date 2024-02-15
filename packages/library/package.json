@@ -13,13 +13,11 @@
     ".": {
       "import": "./dist/lib.js",
       "require": "./dist/lib.umd.cjs",
-      "types": "./dist/src/main.d.ts",
-      "node": "./dist/lib.umd.cjs"
+      "types": "./dist/src/main.d.ts"
     },
     "./style.css": {
       "import": "./dist/style.css",
-      "require": "./dist/.css",
-      "node": "./dist/style.css"
+      "require": "./dist/style.css"
     }
   },
   "scripts": {
