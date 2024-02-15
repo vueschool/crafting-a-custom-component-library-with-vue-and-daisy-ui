@@ -7,6 +7,7 @@
     "docs:dev": "pnpm --filter docs docs:dev",
     "docs:build": "pnpm --filter docs docs:build",
     "docs:preview": "pnpm --filter docs docs:preview",
+    "docs:build-netlify": "pnpm lib:build && pnpm docs:build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write packages",
