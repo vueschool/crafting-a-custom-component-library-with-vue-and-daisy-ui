@@ -2,6 +2,6 @@
 inject: true
 to: packages/docs/components.md
 before: "<!--do not remove - used by hygen-->"
-skip_if: "/components/<%=name.replace(/^Daisy/i, '').toLowerCase()%>"
+skip_if: "/components/<%= h.componentNameNoPrefix(name).toLowerCase()%>"
 ---
-- [<%=h.capitalize(name.replace(/^Daisy/i, ''))%>](/components/<%=name.replace(/^Daisy/i, '').toLowerCase()%>)
+- [<%=h.capitalize(h.componentNameNoPrefix(name))%>](/components/<%=h.componentNameNoPrefix(name).toLowerCase()%>)

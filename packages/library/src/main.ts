@@ -1,12 +1,13 @@
-import comps from './components/components'
 import type { App } from 'vue'
 import './assets/tailwind.css'
+export * from './components/components'
+import * as components from '././components/components'
 
-export const components = comps
-export const DaisyVuePlugin = {
-  install(app: App) {
-    for (const key in comps) {
-      // @ts-ignore this is fine
+export const Plugin = {
+  // need this for the Type to be right even if we aren't using it
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  install(app: App, options: Record<string, any> = {}) {
+    for (const key in components) {
       app.component(key, components[key])
     }
   }

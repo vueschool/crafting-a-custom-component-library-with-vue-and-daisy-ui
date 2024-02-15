@@ -4,7 +4,7 @@ import {
   // createResolver,
   addComponent
 } from '@nuxt/kit'
-import { components as DaisyVueComponents } from 'daisy-vue'
+import * as DaisyVueComponents from 'daisy-vue'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {}
@@ -20,11 +20,15 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     // const resolver = createResolver(import.meta.url)
 
+
     for (const key in DaisyVueComponents) {
-      addComponent({
-        name: key, // name of the component to be used in vue templates
-        filePath: `daisy-vue/${key.replace(/^Daisy/, '')}`
-      })
+      if(key.startsWith("Daisy")){
+        addComponent({
+          name: key, // name of the component to be used in vue templates
+          export: key, // (optional) if the component is a named (rather than default) export
+          filePath: `daisy-vue`
+        })
+      }
     }
   }
 })

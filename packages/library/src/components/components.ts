@@ -7,7 +7,7 @@ import DaisyAnotherComponent from './DaisyAnotherComponent/DaisyAnotherComponent
 
 // ignore removal of traling comma by pretter so hygen can add new imports
 // prettier-ignore
-export default {
+export {
   DaisyButton,
   DaisyAlert,
   DaisyRating,

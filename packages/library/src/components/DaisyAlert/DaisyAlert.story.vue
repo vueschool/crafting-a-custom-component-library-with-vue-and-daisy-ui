@@ -28,7 +28,7 @@ const types = [
 </script>
 <template>
   <Story :layout="{ type: 'grid', width: '100%' }">
-    <Variant v-for="type in types" :key="type" :title="type.type">
+    <Variant v-for="type in types" :key="type.type" :title="type.type">
       <DaisyAlert :type="type.type" :dismissible="state.dismissable">
         {{ type.content }}
         <span v-if="state.longText">

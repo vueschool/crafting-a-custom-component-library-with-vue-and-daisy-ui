@@ -9,40 +9,17 @@
   ],
   "main": "./dist/lib.umd.cjs",
   "module": "./dist/lib.js",
+  "types": "./dist/src/main.d.ts",
   "exports": {
     ".": {
       "import": "./dist/lib.js",
-      "require": "./dist/lib.umd.cjs"
-    },
-    "./components": {
-      "import": "./src/components/components.ts",
-      "require": "./src/components/components.ts"
+      "require": "./dist/lib.umd.cjs",
+      "types": "./dist/src/main.d.ts"
     },
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
-    },
-    "./Alert": {
-      "import": "./src/components/DaisyAlert/DaisyAlert.vue",
-      "require": "./src/components/DaisyAlert/DaisyAlert.vue"
-    },
-    "./Button": {
-      "import": "./src/components/DaisyButton/DaisyButton.vue",
-      "require": "./src/components/DaisyButton/DaisyButton.vue"
-    },
-    "./Rating": {
-      "import": "./src/components/DaisyRating/DaisyRating.vue",
-      "require": "./src/components/DaisyRating/DaisyRating.vue"
-    },
-    "./TestChangeset": {
-      "import": "./src/components/DaisyTestChangeset/DaisyTestChangeset.vue",
-      "require": "./src/components/DaisyTestChangeset/DaisyTestChangeset.vue"
-    },
-    "./AnotherComponent": {
-      "import": "./src/components/DaisyAnotherComponent/DaisyAnotherComponent.vue",
-      "require": "./src/components/DaisyAnotherComponent/DaisyAnotherComponent.vue"
-    },
-    "./do-not-touch-replaced-by-hygen": null
+    }
   },
   "scripts": {
     "dev": "vite",
@@ -50,7 +27,7 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
+    "type-check": "vue-tsc --declaration --emitDeclarationOnly --outDir dist --project ./tsconfig.app.json",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "story:dev": "histoire dev",

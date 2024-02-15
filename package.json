@@ -34,7 +34,6 @@
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "hygen": "^6.2.11",
-    "npm-run-all2": "^6.1.1",
     "prettier": "^3.0.3"
   }
 }

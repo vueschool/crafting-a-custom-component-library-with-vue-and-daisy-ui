@@ -36,7 +36,7 @@ yarn add daisy-vue
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import { DaisyVuePlugin } from 'daisy-vue'
+import { Plugin as DaisyVuePlugin } from 'daisy-vue'
 
 createApp(app).use(DaisyVuePlugin).mount('#app')
 ```
