@@ -34,6 +34,10 @@
       "import": "./src/components/DaisyRating/DaisyRating.vue",
       "require": "./src/components/DaisyRating/DaisyRating.vue"
     },
+    "./TestChangeset": {
+      "import": "./src/components/DaisyTestChangeset/DaisyTestChangeset.vue",
+      "require": "./src/components/DaisyTestChangeset/DaisyTestChangeset.vue"
+    },
     "./do-not-touch-replaced-by-hygen": null
   },
   "scripts": {

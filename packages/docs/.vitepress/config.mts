@@ -35,6 +35,7 @@ export default defineConfig({
           { text: 'Slider', link: '/components/slider' },
           { text: 'Tooltip', link: '/components/tooltip' },
           { text: 'NavBar', link: '/components/navbar' },
+          { text: 'TestChangeset', link: '/components/testchangeset' },
           // do not remove - used by hygen
         ]
       }
