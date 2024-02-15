@@ -4,5 +4,6 @@ import DaisyAlert from 'daisy-vue/Alert'
 </script>
 
 <template>
+  <!-- Test Change -->
   <DaisyAlert dismissible> Hello from Daisy Vue </DaisyAlert>
 </template>
