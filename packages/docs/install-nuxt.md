@@ -7,15 +7,15 @@ DaisyVue comes with a Nuxt module that auto imports all components in a tree-sha
 ::: code-group
 
 ```bash [npm]
-npm install daisy-vue nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+npm install nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 
 ```bash [pnpm]
-pnpm add daisy-vue nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+pnpm add nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 
 ```bash [yarn]
-yarn add daisy-vue nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+yarn add nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
 ```
 
 :::
@@ -43,6 +43,7 @@ import daisyui from 'daisyui'
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+    './node_modules/daisy-vue/src/{components,directives}/**/*.vue',
     './node_modules/nuxt-daisy-vue/node_modules/daisy-vue/src/{components,directives}/**/*.vue'
   ],
   theme: {

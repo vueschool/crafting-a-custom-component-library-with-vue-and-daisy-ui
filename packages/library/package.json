@@ -8,16 +8,21 @@
   ],
   "main": "./dist/lib.umd.cjs",
   "module": "./dist/lib.js",
-  "types": "./dist/src/main.d.ts",
+  "types": "./dist/types/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/lib.js",
-      "require": "./dist/lib.umd.cjs",
-      "types": "./dist/src/main.d.ts"
+      "import": "./src/components/components.ts",
+      "require": "./src/components/components.ts",
+      "types": "./dist/types/components/components.d.ts"
     },
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
+    },
+    "./js": {
+      "import": "./dist/lib.js",
+      "require": "./dist/lib.umd.cjs",
+      "types": "./dist/types/main.d.ts"
     }
   },
   "scripts": {
@@ -26,7 +31,7 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
-    "type-check": "vue-tsc --declaration --emitDeclarationOnly --outDir dist --project ./tsconfig.app.json",
+    "type-check": "vue-tsc --declaration --emitDeclarationOnly --outDir dist --project ./tsconfig.app.json && node ./scripts/rename-types-dir.mjs",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "story:dev": "histoire dev",

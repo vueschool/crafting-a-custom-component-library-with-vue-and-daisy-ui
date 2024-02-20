@@ -6,18 +6,15 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
-  },
-  "devDependencies": {
-    "nuxt": "^3.9.3",
-    "vue": "^3.4.14",
-    "vue-router": "^4.2.5"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.2",
-    "daisy-vue": "workspace:^",
-    "daisyui": "^4.6.1",
-    "nuxt-daisy-vue": "workspace:^"
-  },
-  "version": null
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "daisyui": "^4.7.2",
+    "nuxt": "^3.10.2",
+    "nuxt-daisy-vue": "workspace:^",
+    "vue": "^3.4.19",
+    "vue-router": "^4.2.5"
+  }
 }

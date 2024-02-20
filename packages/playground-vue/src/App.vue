@@ -4,7 +4,7 @@ import { DaisyAlert, DaisyRating } from 'daisy-vue'
 </script>
 
 <template>
-  <!-- Test Change -->
-  <DaisyAlert dismissible> Hello from Daisy Vue </DaisyAlert>
-  <DaisyRating :rating="2"/>
+  <DaisyAlert dismissible type="success"> Hello from Daisy Vue </DaisyAlert>
+  <br />
+  <DaisyRating :rating="2" />
 </template>
