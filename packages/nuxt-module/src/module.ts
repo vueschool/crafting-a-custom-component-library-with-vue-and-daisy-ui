@@ -46,15 +46,8 @@ export default defineNuxtModule<ModuleOptions>({
       if (key.startsWith('Daisy')) {
         addComponent({
           name: key, // name of the component to be used in vue templates
-          filePath: resolve(
-            '..',
-            'node_modules',
-            'daisy-vue',
-            'src',
-            'components',
-            key,
-            `${key}.vue`
-          )
+          export: key,
+          filePath: resolve('daisy-vue', key, `${key}.vue`)
         })
       }
     }
