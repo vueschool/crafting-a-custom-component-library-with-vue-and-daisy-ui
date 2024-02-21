@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.1.1
+
+### Patch Changes
+
+- d845af1: fix icons
+
 ## 1.1.0
 
 ### Minor Changes
