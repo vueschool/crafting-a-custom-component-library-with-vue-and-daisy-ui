@@ -1,5 +1,11 @@
 # nuxt-daisy-vue
 
+## 1.3.0
+
+### Minor Changes
+
+- 81a8e66: fix: remove dep on daisyui and leave that to daisy-vue
+
 ## 1.2.8
 
 ### Patch Changes
