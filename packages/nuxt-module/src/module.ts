@@ -1,10 +1,6 @@
-import {
-  defineNuxtModule,
-  // addPlugin,
-  createResolver,
-  addComponent,
-  installModule
-} from '@nuxt/kit'
+import { defineNuxtModule, addComponent, installModule } from '@nuxt/kit'
+
+// @ts-ignore
 import * as DaisyVueComponents from 'daisy-vue/js'
 import daisyui from 'daisyui'
 
@@ -21,7 +17,6 @@ export default defineNuxtModule<ModuleOptions>({
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async setup(options, nuxt) {
-    const { resolve } = createResolver(import.meta.url)
     const nuxtOptions = nuxt.options as typeof nuxt.options & { tailwindcss: Record<string, any> }
 
     nuxtOptions.tailwindcss = nuxtOptions.tailwindcss || {}

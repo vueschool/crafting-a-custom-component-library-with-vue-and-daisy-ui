@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DaisyButton from './components/DaisyButton/DaisyButton.vue'
+import { DaisyButton } from './main'
 </script>
 
 <template>
