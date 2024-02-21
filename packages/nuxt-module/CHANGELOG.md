@@ -1,5 +1,11 @@
 # nuxt-daisy-vue
 
+## 1.2.9
+
+### Patch Changes
+
+- 0633030: revert daisy ui dep
+
 ## 1.3.0
 
 ### Minor Changes
