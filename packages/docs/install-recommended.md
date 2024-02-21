@@ -35,6 +35,7 @@ Make sure your tailwind config includes the following:
 ```ts [tailwind.config.ts]
 import daisyui from 'daisyui'
 
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     './index.html',
