@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import DaisyIcon from '../DaisyIcon.vue/DaisyIcon.vue'
 import { Icon } from '@iconify/vue'
 
 const props = withDefaults(
