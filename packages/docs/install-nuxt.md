@@ -2,20 +2,20 @@
 
 DaisyVue comes with a Nuxt module that auto imports all components in a tree-shakable fashion.
 
-## Step 1. Install the Necessary Dependencies
+## Step 1. Install the Module
 
 ::: code-group
 
 ```bash [npm]
-npm install nuxt-daisy-vue daisyui@latest
+npm install nuxt-daisy-vue
 ```
 
 ```bash [pnpm]
-pnpm add nuxt-daisy-vue daisyui@latest
+pnpm add nuxt-daisy-vue
 ```
 
 ```bash [yarn]
-yarn add nuxt-daisy-vue daisyui@latest
+yarn add nuxt-daisy-vue
 ```
 
 :::

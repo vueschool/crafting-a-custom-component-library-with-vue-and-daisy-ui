@@ -145,6 +145,9 @@ importers:
       daisy-vue:
         specifier: workspace:^
         version: link:../library
+      daisyui:
+        specifier: ^4.7.2
+        version: 4.7.2(postcss@8.4.35)
     devDependencies:
       '@nuxt/devtools':
         specifier: latest
