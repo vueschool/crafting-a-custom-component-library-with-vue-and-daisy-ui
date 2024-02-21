@@ -4,6 +4,13 @@
 
 ### Patch Changes
 
+- Updated dependencies [dbec49c]
+  - nuxt-daisy-vue@1.2.2
+
+## null
+
+### Patch Changes
+
 - Updated dependencies [a41e50e]
   - nuxt-daisy-vue@1.2.1
 

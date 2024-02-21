@@ -1,5 +1,11 @@
 # nuxt-daisy-vue
 
+## 1.2.2
+
+### Patch Changes
+
+- dbec49c: tyring
+
 ## 1.2.1
 
 ### Patch Changes
