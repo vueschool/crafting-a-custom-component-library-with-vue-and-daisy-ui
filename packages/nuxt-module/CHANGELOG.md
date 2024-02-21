@@ -1,5 +1,11 @@
 # nuxt-daisy-vue
 
+## 1.2.1
+
+### Patch Changes
+
+- a41e50e: fix: bad component module resolution
+
 ## 1.2.0
 
 ### Minor Changes
