@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.2.2
+
+### Patch Changes
+
+- 0766793: fix alert story
+
 ## 1.2.1
 
 ### Patch Changes
