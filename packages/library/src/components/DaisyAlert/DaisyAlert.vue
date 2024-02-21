@@ -4,7 +4,14 @@ import { Icon } from '@iconify/vue'
 
 const props = withDefaults(
   defineProps<{
+    /** Affects the color and icon.
+     * @default 'info'
+     */
     type: 'info' | 'success' | 'warning' | 'error'
+
+    /** When true, displays an "x" button to dismiss the alert. When clicked the alert is hidden and the dismiss event is emitted
+     * @default false
+     */
     dismissible?: boolean
   }>(),
   {
@@ -14,6 +21,7 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
+  /** Emitted when the alert is dismissed and completely transitioned out */
   dismiss: [payload: void]
 }>()
 

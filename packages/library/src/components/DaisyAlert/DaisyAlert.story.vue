@@ -29,7 +29,7 @@ const types = [
 <template>
   <Story :layout="{ type: 'grid', width: '100%' }">
     <Variant v-for="type in types" :key="type.type" :title="type.type">
-      <DaisyAlert :type="type.type" :dismissible="state.dismissable">
+      <DaisyAlert :type="type.type" :dismissible="state.dismissable" @dismiss="alert('ddue')">
         {{ type.content }}
         <span v-if="state.longText">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam nesciunt dicta provident
