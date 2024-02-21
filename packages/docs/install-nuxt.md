@@ -7,50 +7,28 @@ DaisyVue comes with a Nuxt module that auto imports all components in a tree-sha
 ::: code-group
 
 ```bash [npm]
-npm install nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+npm install nuxt-daisy-vue daisyui@latest
 ```
 
 ```bash [pnpm]
-pnpm add nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+pnpm add nuxt-daisy-vue daisyui@latest
 ```
 
 ```bash [yarn]
-yarn add nuxt-daisy-vue @nuxtjs/tailwindcss daisyui@latest
+yarn add nuxt-daisy-vue daisyui@latest
 ```
 
 :::
 
-## Step 2. Regiser the Modules in nuxt.config.ts
+## Step 2. Regiser the Module in nuxt.config.ts
 
 :::code-group
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-daisy-vue']
+  modules: ['nuxt-daisy-vue']
   //...
 })
-```
-
-:::
-
-## Step 3. Create the tailwind.config.ts
-
-:::code-group
-
-```ts [tailwind.config.ts]
-import daisyui from 'daisyui'
-
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    './node_modules/daisy-vue/src/{components,directives}/**/*.vue',
-    './node_modules/nuxt-daisy-vue/node_modules/daisy-vue/src/{components,directives}/**/*.vue'
-  ],
-  theme: {
-    extend: {}
-  },
-  plugins: [daisyui]
-}
 ```
 
 :::

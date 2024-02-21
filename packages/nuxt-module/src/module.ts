@@ -3,9 +3,10 @@ import {
   // addPlugin,
   createResolver,
   addComponent,
-  addTypeTemplate
+  installModule
 } from '@nuxt/kit'
 import * as DaisyVueComponents from 'daisy-vue/js'
+import daisyui from 'daisyui'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {}
@@ -13,13 +14,33 @@ export interface ModuleOptions {}
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-daisy-vue',
-    configKey: 'dasiyVue'
+    configKey: 'daisyVue'
   },
   // Default configuration options of the Nuxt module
   defaults: {},
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setup(options, nuxt) {
+  async setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
+    const nuxtOptions = nuxt.options as typeof nuxt.options & { tailwindcss: Record<string, any> }
+
+    nuxtOptions.tailwindcss = nuxtOptions.tailwindcss || {}
+
+    nuxtOptions.tailwindcss.config = {
+      ...(nuxtOptions?.tailwindcss?.config || {}),
+      content: [
+        './node_modules/daisy-vue/src/{components,directives}/**/*.vue',
+        './node_modules/nuxt-daisy-vue/node_modules/daisy-vue/src/{components,directives}/**/*.vue',
+
+        // @ts-ignore this works fine
+        ...(nuxtOptions?.tailwindcss?.config?.content || [])
+      ],
+      plugins: [daisyui, ...(nuxtOptions?.tailwindcss?.config?.plugins || [])]
+    }
+
+    // this must come after the tailwind config is set
+    // otherwise our config will not be used
+    await installModule('@nuxtjs/tailwindcss')
 
     for (const key in DaisyVueComponents) {
       if (key.startsWith('Daisy')) {

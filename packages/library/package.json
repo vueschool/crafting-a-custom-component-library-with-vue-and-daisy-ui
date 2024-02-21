@@ -11,18 +11,18 @@
   "types": "./dist/types/main.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/types/components/components.d.ts",
       "import": "./src/components/components.ts",
-      "require": "./src/components/components.ts",
-      "types": "./dist/types/components/components.d.ts"
+      "require": "./src/components/components.ts"
     },
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
     },
     "./js": {
+      "types": "./dist/types/main.d.ts",
       "import": "./dist/lib.js",
-      "require": "./dist/lib.umd.cjs",
-      "types": "./dist/types/main.d.ts"
+      "require": "./dist/lib.umd.cjs"
     }
   },
   "scripts": {
