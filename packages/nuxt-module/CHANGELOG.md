@@ -1,5 +1,11 @@
 # nuxt-daisy-vue
 
+## 1.2.0
+
+### Minor Changes
+
+- cc7babc: fix: daisyui dep in nuxt module and update docs to remove express daisyui install
+
 ## 1.1.0
 
 ### Minor Changes
