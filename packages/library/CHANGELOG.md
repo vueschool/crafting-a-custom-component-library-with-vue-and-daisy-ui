@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.1.0
+
+### Minor Changes
+
+- f74ef63: enhance nuxt installation
+
 ## 1.0.1
 
 ### Patch Changes

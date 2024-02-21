@@ -15,5 +15,6 @@
     "nuxt-daisy-vue": "workspace:^",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
-  }
+  },
+  "version": null
 }
