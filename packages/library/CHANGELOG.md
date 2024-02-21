@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.1.2
+
+### Patch Changes
+
+- 0210773: fix: unused import
+
 ## 1.1.1
 
 ### Patch Changes
