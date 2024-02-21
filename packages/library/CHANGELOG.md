@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.2.1
+
+### Patch Changes
+
+- f5f9709: js docs for alert
+
 ## 1.2.0
 
 ### Minor Changes
