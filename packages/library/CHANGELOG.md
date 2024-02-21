@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.2.3
+
+### Patch Changes
+
+- 0a6f961: fix: jsdocs showing in end projects
+
 ## 1.2.2
 
 ### Patch Changes

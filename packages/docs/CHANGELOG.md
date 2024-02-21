@@ -1,5 +1,12 @@
 # docs
 
+## 1.3.3
+
+### Patch Changes
+
+- Updated dependencies [0a6f961]
+  - daisy-vue@1.2.3
+
 ## 1.3.2
 
 ### Patch Changes
