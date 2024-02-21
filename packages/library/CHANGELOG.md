@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.1.3
+
+### Patch Changes
+
+- 80b496a: cleanup
+
 ## 1.1.2
 
 ### Patch Changes

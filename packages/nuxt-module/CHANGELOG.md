@@ -1,5 +1,13 @@
 # nuxt-daisy-vue
 
+## 1.2.5
+
+### Patch Changes
+
+- 80b496a: cleanup
+- Updated dependencies [80b496a]
+  - daisy-vue@1.1.3
+
 ## 1.2.4
 
 ### Patch Changes
