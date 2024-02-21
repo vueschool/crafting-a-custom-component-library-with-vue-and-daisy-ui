@@ -12,7 +12,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write packages",
     "play:vue": "pnpm --filter playground-vue dev",
-    "play:nuxt": "pnpm lib:build && pnpm nuxt-module:dev-prepare && pnpm --filter playground-nuxt dev",
+    "play:nuxt": "pnpm --filter ./packages/nuxt-module dev",
     "story:dev": "pnpm --filter daisy-vue story:dev",
     "story:build": "pnpm --filter daisy-vue story:build",
     "story:preview": "pnpm --filter daisy-vue story:preview",
