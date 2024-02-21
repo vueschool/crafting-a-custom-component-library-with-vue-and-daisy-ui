@@ -26,50 +26,11 @@ yarn add daisy-vue
 
 :::
 
-## Step 2. Install Tailwind CSS
+## Step 2. Configure Tailwind CSS
 
-[Use the official Tailwind installation guide for Vite/Vue](https://tailwindcss.com/docs/guides/vite#vue)
+[Use the official Tailwind installation guide for Vite/Vue](https://tailwindcss.com/docs/guides/vite#vue). However, you do not have to do the actual install step, as it's already installed as a dependency of daisy-vue.
 
-## Step 3. Install Daisy UI
-
-Install the package.
-
-::: code-group
-
-```bash [npm]
-npm install daisyui@latest
-```
-
-```bash [pnpm]
-pnpm add daisyui@latest
-```
-
-```bash [yarn]
-yarn add daisyui@latest
-```
-
-:::
-
-Then register it with Tailwind CSS.
-
-:::code-group
-
-```ts [tailwind.config.ts]
-import daisyui from 'daisyui'
-
-export default {
-  //...
-  plugins: [daisyui]
-}
-```
-
-:::
-
-## Step 4. Tell Tailwind about the Daisy UI Vue Components
-
-This is necessary so that the JIT compiler can see the Tailwind and Daisy UI classes and include them in the generated CSS.
-
-:::code-group
+Make sure your tailwind config includes the following:
 
 ```ts [tailwind.config.ts]
 import daisyui from 'daisyui'
@@ -79,19 +40,18 @@ export default {
     './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}',
     './node_modules/daisy-vue/src/{components,directives}/**/*.{vue,ts}'
-  ]
+  ],
+  plugins: [daisyui]
 }
 ```
 
-:::
-
-## Step 5. Import the Component of Your Choice and Start Using
+## Step 3. Import the Component of Your Choice and Start Using
 
 :::code-group
 
 ```vue [App.vue]
 <script setup lang="ts">
-import DaisyAlert from 'daisy-vue/Alert'
+import { DaisyAlert } from 'daisy-vue'
 </script>
 
 <template>
