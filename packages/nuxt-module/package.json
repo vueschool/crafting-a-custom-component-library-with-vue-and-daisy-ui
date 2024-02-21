@@ -1,6 +1,6 @@
 {
   "name": "nuxt-daisy-vue",
-  "version": "1.3.0",
+  "version": "1.2.8",
   "description": "My new Nuxt module",
   "repository": "your-org/my-module",
   "license": "MIT",
@@ -30,7 +30,8 @@
   "dependencies": {
     "@nuxt/kit": "^3.10.2",
     "@nuxtjs/tailwindcss": "^6.11.4",
-    "daisy-vue": "workspace:^"
+    "daisy-vue": "workspace:^",
+    "daisyui": "^4.7.2"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
