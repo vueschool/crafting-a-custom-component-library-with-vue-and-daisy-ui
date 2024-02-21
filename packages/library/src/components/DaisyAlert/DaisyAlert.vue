@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import DaisyIcon from '../DaisyIcon.vue/DaisyIcon.vue'
+import { Icon } from '@iconify/vue'
 
 const props = withDefaults(
   defineProps<{
@@ -39,11 +40,20 @@ function handleDismiss() {
     emit('dismiss')
   }, transitionDuration)
 }
+
+const icon = computed(() => {
+  return {
+    info: 'carbon:information',
+    success: 'carbon:checkmark-outline',
+    warning: 'carbon:warning',
+    error: 'carbon:error'
+  }[props.type]
+})
 </script>
 <template>
   <Transition>
     <div v-if="!dismissed" role="alert" class="alert" :class="classes">
-      <DaisyIcon :icon="type" size="sm" class="text-white" />
+      <Icon :icon="icon" width="1.5rem" color="white" />
       <span class="text-white"><slot></slot></span>
       <button
         @click="handleDismiss"
