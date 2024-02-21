@@ -1,5 +1,12 @@
 # nuxt-daisy-vue
 
+## 1.2.6
+
+### Patch Changes
+
+- Updated dependencies [be78aa0]
+  - daisy-vue@1.2.0
+
 ## 1.2.5
 
 ### Patch Changes

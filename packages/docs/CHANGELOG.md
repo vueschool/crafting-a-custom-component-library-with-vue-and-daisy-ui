@@ -1,5 +1,16 @@
 # docs
 
+## 1.3.0
+
+### Minor Changes
+
+- be78aa0: feature: package tailwind and daisy with core lib
+
+### Patch Changes
+
+- Updated dependencies [be78aa0]
+  - daisy-vue@1.2.0
+
 ## 1.2.3
 
 ### Patch Changes

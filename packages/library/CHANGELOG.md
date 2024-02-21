@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.2.0
+
+### Minor Changes
+
+- be78aa0: feature: package tailwind and daisy with core lib
+
 ## 1.1.3
 
 ### Patch Changes
