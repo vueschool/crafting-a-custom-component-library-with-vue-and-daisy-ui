@@ -10,13 +10,13 @@ export type Config = {
   }
 }
 
-const defaults: Config = {
+export const defaults: Config = {
   button: {
     loading: 'spinner'
   }
 }
 
-export const configKey = Symbol()
+export const configKey = 'daisyVueProvideInjectKey'
 export function setConfig(config: Config, app?: App) {
   if (app) {
     app.provide(configKey, defu(config, defaults))

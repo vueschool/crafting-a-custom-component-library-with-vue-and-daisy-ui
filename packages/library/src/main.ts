@@ -2,7 +2,8 @@ import type { App } from 'vue'
 import './assets/tailwind.css'
 export * from './components/components'
 import * as components from '././components/components'
-import { Config, setConfig } from './global-config'
+import { setConfig } from './global-config'
+import type { Config } from './global-config'
 
 export function createDaisyVue(config?: Config) {
   const plugin = {

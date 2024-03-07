@@ -2,10 +2,12 @@ import { defineNuxtModule, addComponent, installModule } from '@nuxt/kit'
 
 // @ts-ignore
 import * as DaisyVueComponents from 'daisy-vue/js'
+import type { Config } from 'daisy-vue/config'
+import { defaults } from 'daisy-vue/config'
 import daisyui from 'daisyui'
 
 // Module options TypeScript interface definition
-export interface ModuleOptions {}
+export interface ModuleOptions extends Config {}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -13,7 +15,7 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'daisyVue'
   },
   // Default configuration options of the Nuxt module
-  defaults: {},
+  defaults: defaults,
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async setup(options, nuxt) {
