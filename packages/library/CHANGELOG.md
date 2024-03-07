@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.3.1
+
+### Patch Changes
+
+- 2ff1262: global config fix
+
 ## 1.3.0
 
 ### Minor Changes
