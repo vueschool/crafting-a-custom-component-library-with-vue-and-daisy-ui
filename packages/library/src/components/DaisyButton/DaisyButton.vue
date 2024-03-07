@@ -1,26 +1,22 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import DaisyLoading from '../DaisyLoading/DaisyLoading.vue'
+import type { sizes, Sizes, ColorsBrand, ColorsState } from '../../globals'
+
 const props = withDefaults(
   defineProps<{
-    color:
-      | 'neutral'
-      | 'primary'
-      | 'secondary'
-      | 'accent'
-      | 'error'
-      | 'warning'
-      | 'success'
-      | 'info'
-      | 'ghost'
-      | 'link'
-
-    size: 'lg' | 'default' | 'sm' | 'xs'
+    color: ColorsBrand | ColorsState | 'ghost' | 'link'
+    size: Sizes
     wide?: boolean
     outline?: boolean
+    square?: boolean
+    circle?: boolean
+    loading?: boolean
+    glass?: boolean
   }>(),
   {
     color: 'neutral',
-    size: 'default',
+    size: 'md',
     wide: false,
     outline: false
   }
@@ -28,7 +24,6 @@ const props = withDefaults(
 
 const classes = computed(() => {
   return {
-    // colors
     'btn-neutral': props.color === 'neutral',
     'btn-primary': props.color === 'primary',
     'btn-secondary': props.color === 'secondary',
@@ -44,14 +39,18 @@ const classes = computed(() => {
     'btn-sm': props.size === 'sm',
     'btn-xs': props.size === 'xs',
 
-    // outline
+    // other
     'btn-outline': props.outline,
-    'btn-wide': props.wide
+    'btn-wide': props.wide,
+    'btn-square': props.square,
+    'btn-circle': props.circle,
+    glass: props.glass
   }
 })
 </script>
 <template>
   <button class="btn" :class="classes">
+    <DaisyLoading v-if="loading" :size="size" />
     <slot></slot>
   </button>
 </template>
