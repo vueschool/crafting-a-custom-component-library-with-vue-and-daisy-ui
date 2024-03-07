@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, inject } from 'vue'
+import { computed } from 'vue'
 import DaisyLoading from '../DaisyLoading/DaisyLoading.vue'
 import type { Sizes, ColorsBrand, ColorsState } from '../../globals'
 import { useConfig } from '../../global-config'
