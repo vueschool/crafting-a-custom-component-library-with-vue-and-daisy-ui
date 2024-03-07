@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.3.0
+
+### Minor Changes
+
+- 8291bf4: global config and more components
+
 ## 1.2.3
 
 ### Patch Changes

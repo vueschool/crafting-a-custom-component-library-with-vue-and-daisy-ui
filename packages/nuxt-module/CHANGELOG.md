@@ -1,5 +1,16 @@
 # nuxt-daisy-vue
 
+## 1.3.0
+
+### Minor Changes
+
+- 8291bf4: global config and more components
+
+### Patch Changes
+
+- Updated dependencies [8291bf4]
+  - daisy-vue@1.3.0
+
 ## 1.2.10
 
 ### Patch Changes
