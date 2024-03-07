@@ -19,6 +19,9 @@ const colors = [...colorsBrand, ...colorsState, 'ghost', 'link'] as const
 </script>
 <template>
   <Story :layout="{ type: 'grid', width: '50%' }">
+    <Variant title="No Color">
+      <DaisyButton v-bind="state">{{ state.content }}</DaisyButton>
+    </Variant>
     <Variant v-for="color in colors" :key="color" :title="color">
       <DaisyButton :color="color" v-bind="state">{{ state.content }}</DaisyButton>
     </Variant>

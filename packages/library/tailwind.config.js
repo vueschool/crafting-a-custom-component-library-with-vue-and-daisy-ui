@@ -6,5 +6,6 @@ export default {
   theme: {
     extend: {}
   },
-  plugins: [daisyui]
+  plugins: [daisyui],
+  darkMode: ['selector', '.htw-dark']
 }

@@ -5,8 +5,8 @@ import type { sizes, Sizes, ColorsBrand, ColorsState } from '../../globals'
 
 const props = withDefaults(
   defineProps<{
-    color: ColorsBrand | ColorsState | 'ghost' | 'link'
-    size: Sizes
+    color?: ColorsBrand | ColorsState | 'ghost' | 'link'
+    size?: Sizes
     wide?: boolean
     outline?: boolean
     square?: boolean
@@ -15,7 +15,6 @@ const props = withDefaults(
     glass?: boolean
   }>(),
   {
-    color: 'neutral',
     size: 'md',
     wide: false,
     outline: false

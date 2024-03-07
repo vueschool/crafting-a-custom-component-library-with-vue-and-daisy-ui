@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { Icon } from '@iconify/vue'
+import type { States } from '../../globals/states'
 
 const props = withDefaults(
   defineProps<{
     /** Affects the color and icon.
-     * @default 'info'
+     * @default undefined
      */
-    type: 'info' | 'success' | 'warning' | 'error'
+    type?: States
 
     /** When true, displays an "x" button to dismiss the alert. When clicked the alert is hidden and the dismiss event is emitted
      * @default false
@@ -15,8 +16,7 @@ const props = withDefaults(
     dismissible?: boolean
   }>(),
   {
-    dismissible: false,
-    type: 'info'
+    dismissible: false
   }
 )
 
@@ -49,6 +49,7 @@ function handleDismiss() {
 }
 
 const icon = computed(() => {
+  if (!props.type) return 'carbon:information'
   return {
     info: 'carbon:information',
     success: 'carbon:checkmark-outline',
