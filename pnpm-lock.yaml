@@ -63,6 +63,9 @@ importers:
       daisyui:
         specifier: ^4.6.1
         version: 4.6.1(postcss@8.4.35)
+      defu:
+        specifier: ^6.1.4
+        version: 6.1.4
       postcss:
         specifier: ^8.4.35
         version: 8.4.35
@@ -148,6 +151,9 @@ importers:
       daisy-vue:
         specifier: workspace:^
         version: link:../library
+      daisyui:
+        specifier: ^4.7.2
+        version: 4.7.2(postcss@8.4.35)
     devDependencies:
       '@nuxt/devtools':
         specifier: latest
@@ -4897,6 +4903,18 @@ packages:
 
   /daisyui@4.6.1(postcss@8.4.35):
     resolution: {integrity: sha512-IXI8ypN/hkl1AKsag1XPlWt0wfvL4NedTUtUkv/VFP5q/xDbBZrZthq3/9M2yU1egcbbLhp01rluIz0GICUc+g==}
+    engines: {node: '>=16.9.0'}
+    dependencies:
+      css-selector-tokenizer: 0.8.0
+      culori: 3.3.0
+      picocolors: 1.0.0
+      postcss-js: 4.0.1(postcss@8.4.35)
+    transitivePeerDependencies:
+      - postcss
+    dev: false
+
+  /daisyui@4.7.2(postcss@8.4.35):
+    resolution: {integrity: sha512-9UCss12Zmyk/22u+JbkVrHHxOzFOyY17HuqP5LeswI4hclbj6qbjJTovdj2zRy8cCH6/n6Wh0lTLjriGnyGh0g==}
     engines: {node: '>=16.9.0'}
     dependencies:
       css-selector-tokenizer: 0.8.0

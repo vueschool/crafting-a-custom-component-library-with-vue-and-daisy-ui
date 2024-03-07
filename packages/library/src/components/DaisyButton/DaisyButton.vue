@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, inject } from 'vue'
 import DaisyLoading from '../DaisyLoading/DaisyLoading.vue'
-import type { sizes, Sizes, ColorsBrand, ColorsState } from '../../globals'
+import type { Sizes, ColorsBrand, ColorsState } from '../../globals'
+import { useConfig } from '../../global-config'
 
 const props = withDefaults(
   defineProps<{
@@ -46,10 +47,13 @@ const classes = computed(() => {
     glass: props.glass
   }
 })
+
+const config = useConfig()
+const loadingType = config.button.loading
 </script>
 <template>
   <button class="btn" :class="classes">
-    <DaisyLoading v-if="loading" :size="size" />
+    <DaisyLoading v-if="loading" :size="size" :type="loadingType" />
     <slot></slot>
   </button>
 </template>

@@ -1,6 +1,12 @@
-import './assets/tailwind.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createDaisyVue } from './main'
 
-createApp(App).mount('#app')
+const daisyVue = createDaisyVue({
+  shamefullyRegisterAllComponents: true,
+  button: {
+    loading: 'infinity'
+  }
+})
+
+createApp(App).use(daisyVue).mount('#app')

@@ -1,7 +1,5 @@
-<script setup lang="ts">
-import { DaisyButton } from './main'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <DaisyButton>Click Me</DaisyButton>
+  <DaisyButton :color="'primary'" loading>Click Me</DaisyButton>
 </template>
