@@ -22,24 +22,31 @@ const props = withDefaults(
   }
 )
 
-const classes = computed(() => {
+const colorClasses = computed(() => {
   return {
-    'btn-neutral': props.color === 'neutral',
-    'btn-primary': props.color === 'primary',
-    'btn-secondary': props.color === 'secondary',
-    'btn-accent': props.color === 'accent',
-    'btn-error': props.color === 'error',
-    'btn-warning': props.color === 'warning',
-    'btn-success': props.color === 'success',
-    'btn-info': props.color === 'info',
-    'btn-ghost': props.color === 'ghost',
-    'btn-link': props.color === 'link',
-    // size
-    'btn-lg': props.size === 'lg',
-    'btn-sm': props.size === 'sm',
-    'btn-xs': props.size === 'xs',
+    neutral: 'btn-neutral',
+    primary: 'btn-primary',
+    secondary: 'btn-secondary',
+    accent: 'btn-accent',
+    error: 'btn-error',
+    warning: 'btn-warning',
+    success: 'btn-success',
+    info: 'btn-info',
+    ghost: 'btn-ghost',
+    link: 'btn-link'
+  }[props.color]
+})
 
-    // other
+const sizeClasses = computed(() => {
+  return {
+    lg: 'btn-lg',
+    sm: 'btn-sm',
+    xs: 'btn-xs'
+  }[props.size]
+})
+
+const otherClasses = computed(() => {
+  return {
     'btn-outline': props.outline,
     'btn-wide': props.wide,
     'btn-square': props.square,
@@ -52,7 +59,7 @@ const config = useConfig()
 const loadingType = config.button.loading
 </script>
 <template>
-  <button class="btn" :class="classes">
+  <button class="btn" :class="[colorClasses, sizeClasses, otherClasses]">
     <DaisyLoading v-if="loading" :size="size" :type="loadingType" />
     <slot></slot>
   </button>
