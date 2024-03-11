@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.4.0
+
+### Minor Changes
+
+- f0f87cc: feature: accordian component
+
 ## 1.3.2
 
 ### Patch Changes
