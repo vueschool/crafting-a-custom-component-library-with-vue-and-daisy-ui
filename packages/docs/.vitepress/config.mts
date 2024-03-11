@@ -30,13 +30,7 @@ export default defineConfig({
         // leave trailing comma for hygen
         // prettier-ignore
         items: [
-          { text: 'Alert', link: '/components/alert' },
-          { text: 'Rating', link: '/components/rating' },
           { text: 'Loading', link: '/components/loading' },
-          { text: 'Accordian', link: '/components/accordian' },
-          { text: 'AccordianPanel', link: '/components/accordianpanel' },
-          { text: 'Avatar', link: '/components/avatar' },
-          { text: 'AvatarGroup', link: '/components/avatargroup' },
           { text: 'Badge', link: '/components/badge' },
           // do not remove - used by hygen
         ]
@@ -44,7 +38,7 @@ export default defineConfig({
     ],
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
-  },
+  }
   // markdown: {
   //   config: (md) => {
   //     md.use(VueReplMdPlugin)
