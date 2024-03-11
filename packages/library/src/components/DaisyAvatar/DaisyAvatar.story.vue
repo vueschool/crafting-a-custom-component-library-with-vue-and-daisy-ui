@@ -31,6 +31,21 @@ const state = reactive({})
       />
     </Variant>
 
+    <Variant :title="`Custom BG Color ${size}`" v-for="size in sizes" :key="size">
+      <DaisyAvatar
+        :size="size"
+        placeholder="DK"
+        :class="
+          {
+            xs: 'bg-red-500',
+            sm: 'bg-blue-500',
+            md: 'bg-green-500',
+            lg: 'bg-yellow-500'
+          }[size]
+        "
+      />
+    </Variant>
+
     <template #controls></template>
   </Story>
 </template>
