@@ -1,25 +1,7 @@
 import type { ObjectDirective, VNode, DirectiveBinding } from 'vue'
+import type { Masks } from '../../globals'
 
-// commenting full class name for tailwind JIT to include
-export type DirectiveValueType =
-  | 'squircle' //mask-squircle
-  | 'heart' //mask-heart
-  | 'hexagon' //mask-hexagon
-  | 'hexagon-2' //mask-hexagon-2
-  | 'decagon' //mask-decagon
-  | 'pentagon' //mask-pentagon
-  | 'diamond' //mask-diamond
-  | 'circle' //mask-circle
-  | 'square' //mask-square
-  | 'parallelogram' //mask-parallelogram
-  | 'parallelogram-2' //mask-parallelogram-2
-  | 'parallelogram-3' //mask-parallelogram-3
-  | 'parallelogram-4' //mask-parallelogram-4
-  | 'star' //mask-star
-  | 'triangle' //mask-triangle
-  | 'triangle-2' //mask-triangle-2
-  | 'triangle-3' //mask-triangle-3
-  | 'triangle-4' //mask-triangle-4
+export type DirectiveValueType = Masks
 
 declare module 'vue' {
   export interface ComponentCustomProperties {
@@ -36,14 +18,22 @@ function addMaskClasses(vnode: VNode, binding: DirectiveBinding) {
   vnode.props.class = vnode.props.class || ''
 
   if (typeof vnode.props.class === 'string') {
+    vnode.props.class = vnode.props.class
+      .split(' ')
+      .filter((c) => !c.startsWith('mask-') || c === 'mask')
+      .join(' ')
     vnode.props.class += ` mask mask-${binding.value}`
   }
   if (Array.isArray(vnode.props.class)) {
+    vnode.props.class = vnode.props.class.filter((c) => !c.startsWith('mask-') || c === 'mask')
     vnode.props.class.push(`mask-${binding.value}`)
     vnode.props.class.push(`mask`)
   }
 
   if (isPlainObject(vnode.props.class)) {
+    Object.keys(vnode.props.class).forEach((key) => {
+      if (key.startsWith('mask-')) delete vnode.props.class[key]
+    })
     vnode.props.class.mask = true
     vnode.props.class[`mask-${binding.value}`] = true
   }
