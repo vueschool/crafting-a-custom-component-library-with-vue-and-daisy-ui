@@ -1,5 +1,16 @@
 # docs
 
+## 1.5.0
+
+### Minor Changes
+
+- d96ed6d: feature: badge component
+
+### Patch Changes
+
+- Updated dependencies [d96ed6d]
+  - daisy-vue@1.6.0
+
 ## 1.4.0
 
 ### Minor Changes
