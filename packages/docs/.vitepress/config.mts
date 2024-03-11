@@ -37,6 +37,7 @@ export default defineConfig({
           { text: 'AccordianPanel', link: '/components/accordianpanel' },
           { text: 'Avatar', link: '/components/avatar' },
           { text: 'AvatarGroup', link: '/components/avatargroup' },
+          { text: 'Badge', link: '/components/badge' },
           // do not remove - used by hygen
         ]
       }
