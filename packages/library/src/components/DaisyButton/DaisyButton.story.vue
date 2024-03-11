@@ -6,6 +6,7 @@ import { sizes, Sizes, colorsBrand, colorsState } from '../../globals'
 const state = reactive({
   content: 'Click Me',
   disabled: false,
+  active: false,
   wide: false,
   size: 'md' as Sizes,
   circle: false,
@@ -29,6 +30,7 @@ const colors = [...colorsBrand, ...colorsState, 'ghost', 'link'] as const
     <template #controls>
       <HstText v-model="state.content" title="Content" />
       <HstCheckbox v-model="state.disabled" title="Disabled" />
+      <HstCheckbox v-model="state.active" title="Active" />
       <HstCheckbox v-model="state.circle" title="Circle" />
       <HstCheckbox v-model="state.square" title="Square" />
       <HstCheckbox v-model="state.wide" title="Wide" />

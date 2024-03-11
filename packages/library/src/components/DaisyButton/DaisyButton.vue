@@ -7,6 +7,7 @@ import { useConfig } from '../../global-config'
 const props = withDefaults(
   defineProps<{
     color?: ColorsBrand | ColorsState | 'ghost' | 'link'
+    active?: boolean
     size?: Sizes
     wide?: boolean
     outline?: boolean
@@ -51,6 +52,7 @@ const otherClasses = computed(() => {
     'btn-wide': props.wide,
     'btn-square': props.square,
     'btn-circle': props.circle,
+    'btn-active': props.active,
     glass: props.glass
   }
 })
