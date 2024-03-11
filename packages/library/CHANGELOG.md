@@ -1,5 +1,11 @@
 # daisy-vue
 
+## 1.5.0
+
+### Minor Changes
+
+- 1e9905a: feature:avatar component
+
 ## 1.4.0
 
 ### Minor Changes

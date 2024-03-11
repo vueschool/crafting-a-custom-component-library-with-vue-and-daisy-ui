@@ -1,5 +1,16 @@
 # docs
 
+## 1.4.0
+
+### Minor Changes
+
+- 1e9905a: feature:avatar component
+
+### Patch Changes
+
+- Updated dependencies [1e9905a]
+  - daisy-vue@1.5.0
+
 ## 1.3.7
 
 ### Patch Changes
