@@ -2,14 +2,24 @@
 import { reactive } from 'vue'
 import DaisyButton from './DaisyButton.vue'
 
-const state = reactive({})
+const state = reactive({
+  disabled: false
+})
 </script>
 <template>
-  <Story :layout="{ type: 'grid', width: '100%' }">
-    <Variant title="Variant Title">
-      <DaisyButton color="accent"> Click Me </DaisyButton>
+  <Story :layout="{ type: 'grid', width: '25%' }">
+    <Variant title="Accent">
+      <DaisyButton color="accent" :disabled="state.disabled"> Click Me </DaisyButton>
+    </Variant>
+    <Variant title="primary">
+      <DaisyButton color="primary" :disabled="state.disabled"> Click Me </DaisyButton>
+    </Variant>
+    <Variant title="secondary">
+      <DaisyButton color="secondary" :disabled="state.disabled"> Click Me </DaisyButton>
     </Variant>
 
-    <template #controls></template>
+    <template #controls>
+      <HstCheckbox v-model="state.disabled" title="Disabled" />
+    </template>
   </Story>
 </template>
