@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { ColorsBrand, ColorsState } from '../../globals'
 const props = defineProps<{
-  color: 'primary' | 'secondary' | 'accent'
+  color: ColorsBrand | ColorsState | 'ghost' | 'link'
 }>()
 
 const colorClass = computed(() => {
@@ -11,7 +12,10 @@ const colorClass = computed(() => {
     secondary: 'btn-secondary',
     accent: 'btn-accent',
     ghost: 'btn-ghost',
-
+    success: 'btn-success',
+    warning: 'btn-warning',
+    error: 'btn-error',
+    info: 'btn-info',
     link: 'btn-link'
   }[props.color]
 })

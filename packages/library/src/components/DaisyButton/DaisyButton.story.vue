@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import DaisyButton from './DaisyButton.vue'
+import { colorsBrand, colorsState } from '../../globals'
 
 const state = reactive({
   disabled: false
@@ -8,14 +9,12 @@ const state = reactive({
 </script>
 <template>
   <Story :layout="{ type: 'grid', width: '25%' }">
-    <Variant title="Accent">
-      <DaisyButton color="accent" :disabled="state.disabled"> Click Me </DaisyButton>
-    </Variant>
-    <Variant title="primary">
-      <DaisyButton color="primary" :disabled="state.disabled"> Click Me </DaisyButton>
-    </Variant>
-    <Variant title="secondary">
-      <DaisyButton color="secondary" :disabled="state.disabled"> Click Me </DaisyButton>
+    <Variant
+      v-for="color in [...colorsBrand, ...colorsState, 'ghost' as const, 'link' as const]"
+      :key="color"
+      :title="color"
+    >
+      <DaisyButton :color="color" :disabled="state.disabled"> Click Me </DaisyButton>
     </Variant>
 
     <template #controls>
