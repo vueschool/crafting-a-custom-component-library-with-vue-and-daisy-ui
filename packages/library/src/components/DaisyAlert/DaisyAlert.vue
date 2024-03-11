@@ -61,13 +61,13 @@ const icon = computed(() => {
 <template>
   <Transition>
     <div v-if="!dismissed" role="alert" class="alert" :class="classes">
-      <Icon :icon="icon" width="1.5rem" color="white" />
-      <span class="text-white"><slot></slot></span>
+      <Icon :icon="icon" width="1.5rem" />
+      <span><slot></slot></span>
       <button
         @click="handleDismiss"
         v-if="dismissible"
         type="button"
-        class="text-lg text-white close"
+        class="text-lg close"
         data-dismiss="alert"
         aria-label="Close"
       >
