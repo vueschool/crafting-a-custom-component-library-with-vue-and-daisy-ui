@@ -33,6 +33,8 @@ export default defineConfig({
           { text: 'Alert', link: '/components/alert' },
           { text: 'Rating', link: '/components/rating' },
           { text: 'Loading', link: '/components/loading' },
+          { text: 'Accordian', link: '/components/accordian' },
+          { text: 'AccordianPanel', link: '/components/accordianpanel' },
           // do not remove - used by hygen
         ]
       }
