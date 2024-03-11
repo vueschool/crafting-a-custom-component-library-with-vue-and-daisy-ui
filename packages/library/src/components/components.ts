@@ -6,6 +6,6 @@ import DaisyLoading from './DaisyLoading/DaisyLoading.vue'
 // prettier-ignore
 export {
   DaisyBadge,
-  DaisyLoading
+  DaisyLoading,
   // export - do not remove this line, used for hygen generations
 }
