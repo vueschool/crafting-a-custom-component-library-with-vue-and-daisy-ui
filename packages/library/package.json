@@ -28,7 +28,7 @@
       "import": "./src/global-config.ts",
       "require": "./src/global-config.ts"
     },
-    "./global": {
+    "./globals": {
       "types": "./src/globals/index.ts",
       "import": "./src/globals/index.ts",
       "require": "./src/globals/index.ts"
