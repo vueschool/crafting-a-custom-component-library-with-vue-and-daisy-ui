@@ -32,6 +32,7 @@ export default defineConfig({
         items: [
           { text: 'Loading', link: '/components/loading' },
           { text: 'Badge', link: '/components/badge' },
+          { text: 'Tabs', link: '/components/tabs' },
           // do not remove - used by hygen
         ]
       }
