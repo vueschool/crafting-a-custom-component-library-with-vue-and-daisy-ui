@@ -27,6 +27,11 @@
       "types": "./src/global-config.ts",
       "import": "./src/global-config.ts",
       "require": "./src/global-config.ts"
+    },
+    "./global": {
+      "types": "./src/globals/index.ts",
+      "import": "./src/globals/index.ts",
+      "require": "./src/globals/index.ts"
     }
   },
   "scripts": {
