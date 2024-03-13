@@ -14,7 +14,7 @@ const props = withDefaults(
     circle?: boolean
     loading?: boolean
     glass?: boolean
-    active: boolean
+    active?: boolean
   }>(),
   {
     size: 'md',
