@@ -1,5 +1,12 @@
 # docs
 
+## 1.6.1
+
+### Patch Changes
+
+- Updated dependencies [eaf77e9]
+  - daisy-vue@1.7.1
+
 ## 1.6.0
 
 ### Minor Changes
