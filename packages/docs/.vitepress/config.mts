@@ -35,6 +35,8 @@ export default defineConfig({
           { text: 'Button', link: '/components/button' },
           { text: 'Tabs', link: '/components/tabs' },
           { text: 'BrowserMockup', link: '/components/browsermockup' },
+          { text: 'DataTable', link: '/components/datatable' },
+          { text: 'Img', link: '/components/img' },
           // do not remove - used by hygen
         ]
       }

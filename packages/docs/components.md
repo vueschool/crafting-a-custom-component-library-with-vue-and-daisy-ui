@@ -5,4 +5,6 @@
 - [Button](/components/button)
 - [Tabs](/components/tabs)
 - [BrowserMockup](/components/browsermockup)
+- [DataTable](/components/datatable)
+- [Img](/components/img)
 <!--do not remove - used by hygen-->

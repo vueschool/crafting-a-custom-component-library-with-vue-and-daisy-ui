@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { error } from 'console'
 import { vMask } from '../../directives/vMask/VMask'
 import type { Masks, Sizes } from '../../globals'
-import { computed, inject } from 'vue'
+import { computed, inject, ref } from 'vue'
 
 const props = withDefaults(
   defineProps<{
@@ -45,11 +46,19 @@ const placeholderClass = computed(() => {
 const classes = computed(() => {
   return [sizeClasses.value, placeholderClass.value]
 })
+
+const errorLoadingImage = ref(false)
 </script>
 
 <template>
   <div class="avatar" :class="classes" v-mask="mask">
-    <div v-if="placeholder" :class="textSizeClasses" class="text-center">{{ placeholder }}</div>
-    <img v-else :src="src" />
+    <div
+      v-if="(!src && placeholder) || (errorLoadingImage && placeholder)"
+      :class="textSizeClasses"
+      class="text-center"
+    >
+      {{ placeholder }}
+    </div>
+    <img v-else :src="src" @error="errorLoadingImage = true" />
   </div>
 </template>

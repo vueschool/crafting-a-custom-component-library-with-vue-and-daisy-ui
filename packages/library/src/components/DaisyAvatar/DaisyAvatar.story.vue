@@ -53,6 +53,16 @@ const state = reactive({
       </div>
     </Variant>
 
+    <Variant title="With placeholder backup when image not loaded">
+      <DaisyAvatar
+        v-bind="state"
+        size="md"
+        class="bg-green-500"
+        :src="`https://i.pravatar.cc/150?img=1000000`"
+        placeholder="DK"
+      />
+    </Variant>
+
     <template #controls>
       <HstSelect v-model="state.mask" :options="masks" title="Mask" />
     </template>
