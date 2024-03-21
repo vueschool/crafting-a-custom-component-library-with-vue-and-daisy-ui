@@ -1,3 +1,4 @@
+// DaisyButton.story.vue
 <script setup lang="ts">
 import { reactive } from 'vue'
 import DaisyButton from './DaisyButton.vue'
@@ -13,7 +14,8 @@ const state = reactive({
   square: false,
   loading: false,
   outline: false,
-  glass: false
+  glass: false,
+  active: false
 })
 
 const colors = [...colorsBrand, ...colorsState, 'ghost', 'link'] as const

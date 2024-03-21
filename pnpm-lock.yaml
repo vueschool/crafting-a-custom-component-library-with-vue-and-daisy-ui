@@ -38,19 +38,13 @@ importers:
       daisy-vue:
         specifier: workspace:^
         version: link:../library
-      daisyui:
-        specifier: ^4.6.1
-        version: 4.6.1(postcss@8.4.35)
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.1
       vue:
         specifier: ^3.4.19
         version: 3.4.19(typescript@5.3.3)
     devDependencies:
       vitepress:
         specifier: 1.0.0-rc.42
-        version: 1.0.0-rc.42(@algolia/client-search@4.22.1)(postcss@8.4.35)(search-insights@2.13.0)(typescript@5.3.3)
+        version: 1.0.0-rc.42(@algolia/client-search@4.22.1)(search-insights@2.13.0)(typescript@5.3.3)
 
   packages/library:
     dependencies:
@@ -11368,7 +11362,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.0.0-rc.42(@algolia/client-search@4.22.1)(postcss@8.4.35)(search-insights@2.13.0)(typescript@5.3.3):
+  /vitepress@1.0.0-rc.42(@algolia/client-search@4.22.1)(search-insights@2.13.0)(typescript@5.3.3):
     resolution: {integrity: sha512-VeiVVXFblt/sjruFSJBNChMWwlztMrRMe8UXdNpf4e05mKtTYEY38MF5qoP90KxPTCfMQiKqwEGwXAGuOTK8HQ==}
     hasBin: true
     peerDependencies:
@@ -11392,7 +11386,6 @@ packages:
       focus-trap: 7.5.4
       mark.js: 8.11.1
       minisearch: 6.3.0
-      postcss: 8.4.35
       shiki: 1.1.2
       vite: 5.0.12(@types/node@20.11.17)
       vue: 3.4.19(typescript@5.3.3)

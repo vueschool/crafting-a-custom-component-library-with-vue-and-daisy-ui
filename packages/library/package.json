@@ -1,6 +1,6 @@
 {
   "name": "daisy-vue",
-  "version": "1.6.0",
+  "version": "1.7.1",
   "type": "module",
   "files": [
     "dist",
@@ -27,6 +27,11 @@
       "types": "./src/global-config.ts",
       "import": "./src/global-config.ts",
       "require": "./src/global-config.ts"
+    },
+    "./globals": {
+      "types": "./src/globals/index.ts",
+      "import": "./src/globals/index.ts",
+      "require": "./src/globals/index.ts"
     }
   },
   "scripts": {

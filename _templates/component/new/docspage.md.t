@@ -1,5 +1,5 @@
 ---
-to: packages/docs/components/<%=name.replace(/^Daisy/i, '').toLowerCase()%>.md
+to: packages/docs/components/<%=h.componentNameNoPrefix(name).toLowerCase()%>.md
 ---
 
 <script setup lang="ts">

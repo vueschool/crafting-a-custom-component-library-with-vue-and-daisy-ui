@@ -1,8 +1,8 @@
+// DaisyButton.vue
 <script setup lang="ts">
 import { computed } from 'vue'
 import DaisyLoading from '../DaisyLoading/DaisyLoading.vue'
 import type { Sizes, ColorsBrand, ColorsState } from '../../globals'
-import { useConfig } from '../../global-config'
 
 const props = withDefaults(
   defineProps<{
@@ -52,17 +52,14 @@ const otherClasses = computed(() => {
     'btn-wide': props.wide,
     'btn-square': props.square,
     'btn-circle': props.circle,
-    'btn-active': props.active,
-    glass: props.glass
+    glass: props.glass,
+    'btn-active': props.active
   }
 })
-
-const config = useConfig()
-const loadingType = config.button.loading
 </script>
 <template>
   <button class="btn" :class="[colorClasses, sizeClasses, otherClasses]">
-    <DaisyLoading v-if="loading" :size="size" :type="loadingType" />
+    <DaisyLoading v-if="loading" :size="size" />
     <slot></slot>
   </button>
 </template>

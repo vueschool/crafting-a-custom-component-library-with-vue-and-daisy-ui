@@ -1,6 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
+import './theme-switcher-support'
 
 // import PlaygroundWrapper from '../components/PlaygroundWrapper.vue'
 import DefaultTheme from 'vitepress/theme'
@@ -12,7 +13,7 @@ export default {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
-  },
+  }
   // enhanceApp({ app, router, siteData }) {
   //   app.component('VuePlayground', PlaygroundWrapper)
   // }
