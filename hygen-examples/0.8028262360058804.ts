@@ -1,0 +1,1 @@
+const greeting = Hello Vue School Student;
