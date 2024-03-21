@@ -35,6 +35,8 @@ export default defineConfig({
           { text: 'Button', link: '/components/button' },
           { text: 'Tabs', link: '/components/tabs' },
           { text: 'BrowserMockup', link: '/components/browsermockup' },
+          { text: 'Accordian', link: '/components/accordian' },
+          { text: 'AccordianPanel', link: '/components/accordianpanel' },
           // do not remove - used by hygen
         ]
       }
