@@ -1,20 +1,49 @@
 <script setup lang="ts">
-import { inject } from 'vue'
-
-const id = inject('accordianId', '')
-
-if (!id) {
-  throw new Error('DaisyAccordianPanel must be used inside a DaisyAccordian')
-}
-defineProps<{
-  title: string
+import { inject, ref } from 'vue'
+import { nanoid } from 'nanoid'
+const props = defineProps<{
+  title?: string
 }>()
+
+const id = nanoid()
+
+const defaultData = ref({
+  id: null,
+  activeIds: [],
+  multipleOpen: false
+})
+const accordian = inject('dasiyAccordianData', defaultData)
+
+if (accordian.value.id === null) {
+  throw new Error('DaisyAccordianPanel must be used within a DaisyAccordian')
+}
+
+function handleToggle() {
+  // if currently active panel is clicked, close it
+  if (accordian.value.activeIds.includes(id)) {
+    accordian.value.activeIds = accordian.value.activeIds.filter((activeId) => activeId !== id)
+  } else {
+    // otherwise open it
+    if (!accordian.value.multipleOpen) {
+      accordian.value.activeIds = []
+    }
+    accordian.value.activeIds.push(id)
+  }
+}
 </script>
 
 <template>
-  <div class="border collapse collapse-arrow join-item border-base-300">
-    <input type="radio" :name="id" checked="checked" />
-    <div class="text-xl font-medium collapse-title">{{ title }}</div>
+  <div
+    class="border collapse collapse-arrow join-item border-base-300 bg-base-100"
+    :class="{ 'collapse-open': accordian.activeIds.includes(id) }"
+  >
+    <button
+      class="block font-bold text-left cursor-pointer collapse-title focus:shadow-primary focus:outline-none"
+      @click="handleToggle"
+      @keydown.Enter="handleToggle"
+    >
+      <slot name="title">{{ title }}</slot>
+    </button>
     <div class="collapse-content">
       <slot></slot>
     </div>

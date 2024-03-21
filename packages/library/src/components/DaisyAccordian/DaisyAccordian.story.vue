@@ -7,7 +7,7 @@ const state = reactive({})
 </script>
 <template>
   <Story :layout="{ type: 'grid', width: '100%' }">
-    <Variant title="Variant Title">
+    <Variant title="Only One Open at a Time">
       <DaisyAccordian>
         <DaisyAccordianPanel title="Panel 1">
           <p>Panel 1 Content</p>
@@ -18,8 +18,8 @@ const state = reactive({})
       </DaisyAccordian>
     </Variant>
 
-    <Variant title="Variant Title">
-      <DaisyAccordian>
+    <Variant title="Multiple Open at One Time">
+      <DaisyAccordian multiple-open>
         <DaisyAccordianPanel title="Panel 1">
           <p>Panel 1 Content</p>
         </DaisyAccordianPanel>
