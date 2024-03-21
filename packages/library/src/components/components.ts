@@ -6,6 +6,7 @@ import DaisyTab from './DaisyTab/DaisyTab.vue'
 import DaisyBrowserMockup from './DaisyBrowserMockup/DaisyBrowserMockup.vue'
 import DaisyDataTable from './DaisyDataTable/DaisyDataTable.vue'
 import DaisyImg from './DaisyImg/DaisyImg.vue'
+import DaisyContextMenu from './DaisyContextMenu/DaisyContextMenu.vue'
 // import - do not remove this line, used for hygen generations
 
 // ignore removal of traling comma by pretter so hygen can add new imports
@@ -19,5 +20,6 @@ export {
   DaisyBrowserMockup,
   DaisyDataTable,
   DaisyImg,
+  DaisyContextMenu,
   // export - do not remove this line, used for hygen generations
 }

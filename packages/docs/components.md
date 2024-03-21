@@ -7,4 +7,5 @@
 - [BrowserMockup](/components/browsermockup)
 - [DataTable](/components/datatable)
 - [Img](/components/img)
+- [ContextMenu](/components/contextmenu)
 <!--do not remove - used by hygen-->
