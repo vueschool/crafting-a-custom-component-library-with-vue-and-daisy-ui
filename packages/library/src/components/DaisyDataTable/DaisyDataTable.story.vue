@@ -4,8 +4,11 @@ import DaisyDataTable from './DaisyDataTable.vue'
 import DaisyAvatar from '../DaisyAvatar/DaisyAvatar.vue'
 import { faker } from '@faker-js/faker'
 import { ref } from 'vue'
+import { Sizes, sizes } from '../../globals'
 
-const state = reactive({})
+const state = reactive({
+  size: 'md' as Sizes
+})
 
 interface User {
   id: number
@@ -38,6 +41,7 @@ generateData()
     <Variant title="Variant Title">
       <DaisyDataTable
         v-model="data"
+        v-bind="state"
         :columns="[
           { key: 'id', label: 'ID', sortable: true },
           { key: 'image', label: '' },
@@ -58,6 +62,8 @@ generateData()
       </DaisyDataTable>
     </Variant>
 
-    <template #controls></template>
+    <template #controls>
+      <HstSelect v-model="state.size" title="Size" :options="sizes" />
+    </template>
   </Story>
 </template>

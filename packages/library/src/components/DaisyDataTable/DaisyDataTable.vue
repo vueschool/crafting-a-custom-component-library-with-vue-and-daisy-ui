@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { ref } from 'vue'
-withDefaults(
+import { ref, computed } from 'vue'
+import { Sizes } from '../../globals'
+const props = withDefaults(
   defineProps<{
     id?: string
+    size: Sizes
     columns: {
       key: string
       label: string
@@ -11,7 +13,8 @@ withDefaults(
     }[]
   }>(),
   {
-    id: 'id'
+    id: 'id',
+    size: 'md'
   }
 )
 
@@ -43,11 +46,20 @@ function sort(column: string) {
   })
   sortedBy.value.order = sortedBy.value.order === 'asc' ? 'desc' : 'asc'
 }
+
+const sizeClass = computed(() => {
+  return {
+    xs: 'table-xs',
+    sm: 'table-sm',
+    md: 'table-md',
+    lg: 'table-lg'
+  }[props.size]
+})
 </script>
 
 <template>
   <div class="overflow-x-auto">
-    <table class="table">
+    <table class="table" :class="sizeClass">
       <!-- head -->
       <thead>
         <tr>
