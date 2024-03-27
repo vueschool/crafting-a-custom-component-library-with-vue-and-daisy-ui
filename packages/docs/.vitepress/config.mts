@@ -40,6 +40,7 @@ export default defineConfig({
           { text: 'Avatar', link: '/components/avatar' },
           { text: 'AvatarGroup', link: '/components/avatargroup' },
           { text: 'ContextMenu', link: '/components/contextmenu' },
+          { text: 'Alert', link: '/components/alert' },
           // do not remove - used by hygen
         ]
       }
