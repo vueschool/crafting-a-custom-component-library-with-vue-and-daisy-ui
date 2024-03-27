@@ -7,8 +7,16 @@ import { ref } from 'vue'
 
 const state = reactive({})
 
-const data = ref([])
-const selected = ref([])
+interface User {
+  id: number
+  image: string
+  firstName: string
+  lastName: string
+  age: number
+}
+
+const data = ref<User[]>([])
+const selected = ref<User[]>([])
 
 function generateData() {
   data.value = []

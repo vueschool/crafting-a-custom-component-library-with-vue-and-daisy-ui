@@ -15,7 +15,9 @@ withDefaults(
   }
 )
 
-const data = defineModel<Record<string, any>[]>()
+const data = defineModel<Record<string, any>[]>({
+  required: true
+})
 const selected = defineModel<Record<string, any>[]>('select')
 
 const sortedBy = ref<{
@@ -27,6 +29,7 @@ const sortedBy = ref<{
 })
 
 function sort(column: string) {
+  if (!sortedBy.value) return
   sortedBy.value.key = column
   data.value.sort((a, b) => {
     if (sortedBy.value) {
@@ -56,7 +59,7 @@ function sort(column: string) {
               class="flex items-center"
             >
               {{ column.label }}
-              <button v-if="sortedBy.key === column.key">
+              <button v-if="sortedBy && sortedBy.key === column.key">
                 <Icon icon="mdi:chevron-up" v-if="sortedBy.order === 'asc'" class="w-5 h-5" />
                 <Icon icon="mdi:chevron-down" v-if="sortedBy.order === 'desc'" class="w-5 h-5" />
               </button>
