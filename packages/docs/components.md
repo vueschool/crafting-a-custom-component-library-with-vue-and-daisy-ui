@@ -11,4 +11,5 @@
 - [AvatarGroup](/components/avatargroup)
 - [ContextMenu](/components/contextmenu)
 - [Alert](/components/alert)
+- [DataTable](/components/datatable)
 <!--do not remove - used by hygen-->
