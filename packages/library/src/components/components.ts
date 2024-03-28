@@ -12,6 +12,7 @@ import DaisyContextMenu from './DaisyContextMenu/DaisyContextMenu.vue'
 import DaisyAlert from './DaisyAlert/DaisyAlert.vue'
 import DaisyDataTable from './DaisyDataTable/DaisyDataTable.vue'
 import DaisyRating from './DaisyRating/DaisyRating.vue'
+import DaisySteps from './DaisySteps/DaisySteps.vue'
 // import - do not remove this line, used for hygen generations
 
 // ignore removal of traling comma by pretter so hygen can add new imports
@@ -31,5 +32,6 @@ export {
   DaisyAlert,
   DaisyDataTable,
   DaisyRating,
+  DaisySteps,
   // export - do not remove this line, used for hygen generations
 }

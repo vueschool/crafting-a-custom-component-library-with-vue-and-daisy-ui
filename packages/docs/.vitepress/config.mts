@@ -43,6 +43,7 @@ export default defineConfig({
           { text: 'Alert', link: '/components/alert' },
           { text: 'DataTable', link: '/components/datatable' },
           { text: 'Rating', link: '/components/rating' },
+          { text: 'Steps', link: '/components/steps' },
           // do not remove - used by hygen
         ]
       }
