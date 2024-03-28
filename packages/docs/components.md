@@ -12,4 +12,5 @@
 - [ContextMenu](/components/contextmenu)
 - [Alert](/components/alert)
 - [DataTable](/components/datatable)
+- [Rating](/components/rating)
 <!--do not remove - used by hygen-->
