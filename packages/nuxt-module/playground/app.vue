@@ -1,3 +1,3 @@
 <template>
-  <DaisyAlert type="success" dismissible> Hello world </DaisyAlert>
+  <DaisyLoading />
 </template>
