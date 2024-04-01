@@ -22,10 +22,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxtOptions.tailwindcss = nuxtOptions.tailwindcss || {}
 
-    // nuxtOptions.build = defu(nuxtOptions.build, {
-    //   transpile: ['daisyui']
-    // })
-
     // @ts-ignore this works fine
     nuxtOptions.tailwindcss = defu(nuxtOptions.tailwindcss, {
       config: {
