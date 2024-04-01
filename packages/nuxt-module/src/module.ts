@@ -4,7 +4,8 @@ import { defineNuxtModule, addComponent, installModule } from '@nuxt/kit'
 import * as DaisyVueComponents from 'daisy-vue/js'
 import type { Config } from 'daisy-vue/config'
 import { defaults } from 'daisy-vue/config'
-import daisyui from 'daisyui'
+import daisyui from 'daisyui/src/index'
+import defu from 'defu'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions extends Config {}
@@ -23,17 +24,20 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxtOptions.tailwindcss = nuxtOptions.tailwindcss || {}
 
-    nuxtOptions.tailwindcss.config = {
-      ...(nuxtOptions?.tailwindcss?.config || {}),
-      content: [
-        './node_modules/daisy-vue/src/{components,directives}/**/*.vue',
-        './node_modules/nuxt-daisy-vue/node_modules/daisy-vue/src/{components,directives}/**/*.vue',
+    // nuxtOptions.build = defu(nuxtOptions.build, {
+    //   transpile: ['daisyui']
+    // })
 
-        // @ts-ignore this works fine
-        ...(nuxtOptions?.tailwindcss?.config?.content || [])
-      ],
-      plugins: [daisyui, ...(nuxtOptions?.tailwindcss?.config?.plugins || [])]
-    }
+    // @ts-ignore this works fine
+    nuxtOptions.tailwindcss = defu(nuxtOptions.tailwindcss, {
+      config: {
+        content: [
+          './node_modules/daisy-vue/src/{components,directives}/**/*.vue',
+          './node_modules/nuxt-daisy-vue/node_modules/daisy-vue/src/{components,directives}/**/*.vue'
+        ],
+        plugins: [daisyui]
+      }
+    })
 
     // this must come after the tailwind config is set
     // otherwise our config will not be used

@@ -151,6 +151,9 @@ importers:
       daisyui:
         specifier: ^4.7.2
         version: 4.7.2(postcss@8.4.35)
+      defu:
+        specifier: ^6.1.4
+        version: 6.1.4
     devDependencies:
       '@nuxt/devtools':
         specifier: latest
@@ -3226,7 +3229,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.12(@types/node@20.11.17)
+      vite: 5.0.12(@types/node@18.19.10)
       vue: 3.4.19(typescript@5.3.3)
     dev: true
 
@@ -11387,7 +11390,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.3.0
       shiki: 1.1.2
-      vite: 5.0.12(@types/node@20.11.17)
+      vite: 5.0.12(@types/node@18.19.10)
       vue: 3.4.19(typescript@5.3.3)
     transitivePeerDependencies:
       - '@algolia/client-search'
