@@ -1,5 +1,11 @@
 # nuxt-daisy-vue
 
+## 1.3.9
+
+### Patch Changes
+
+- e0129bb: fix: daisy not included
+
 ## 1.3.8
 
 ### Patch Changes
