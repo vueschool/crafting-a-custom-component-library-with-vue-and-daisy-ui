@@ -1,5 +1,11 @@
 # nuxt-daisy-vue
 
+## 1.3.8
+
+### Patch Changes
+
+- 4073633: fix:include daisy ui in module
+
 ## 1.3.7
 
 ### Patch Changes
