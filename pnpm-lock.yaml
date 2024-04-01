@@ -73,6 +73,9 @@ importers:
         specifier: ^3.4.1
         version: 3.4.1
     devDependencies:
+      '@faker-js/faker':
+        specifier: ^8.4.1
+        version: 8.4.1
       '@histoire/plugin-vue':
         specifier: ^0.17.9
         version: 0.17.9(histoire@0.17.9)(vite@5.0.12)(vue@3.4.15)
@@ -1454,6 +1457,11 @@ packages:
   /@eslint/js@8.56.0:
     resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
+  /@faker-js/faker@8.4.1:
+    resolution: {integrity: sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg==}
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
     dev: true
 
   /@fastify/busboy@2.1.0:
@@ -3229,7 +3237,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.12(@types/node@18.19.10)
+      vite: 5.0.12(@types/node@20.11.17)
       vue: 3.4.19(typescript@5.3.3)
     dev: true
 
@@ -11390,7 +11398,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.3.0
       shiki: 1.1.2
-      vite: 5.0.12(@types/node@18.19.10)
+      vite: 5.0.12(@types/node@20.11.17)
       vue: 3.4.19(typescript@5.3.3)
     transitivePeerDependencies:
       - '@algolia/client-search'
